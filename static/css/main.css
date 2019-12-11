@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+
+body {
+
+    
+}
+
+/* Footer */
+#footer {
+    background-color: #262626;
+    color: white;
+    padding-top: 30px;
+}
+footer li {
+    list-style: none;
+}
+footer ul {
+    padding: 0;
+    margin: 0;
+  }
+.footer-heading {
+    margin-bottom: 2rem;
+  }
+.footer-img img {
+    width: 80%;
+}
+.footer-links {
+    text-align: center;
+    text-transform: uppercase;
+}
+.social-links{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.social-links a {
+    font-size: 25px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+.social-links a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+.service-links {
+    Padding-left : 20px;
+}
+.copyright {
+    background-color: #333333;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+}
+.copyright p {
+    margin: 10px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
