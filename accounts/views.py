@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from accounts.forms import UserLoginForm
 
 # Create your views here.
@@ -8,6 +9,7 @@ def index(request):
     '''Return the home page'''
     return render(request, 'index.html')
 
+@login_required
 def logout(request):
     '''Log out the user / request contains the user object'''
     auth.logout(request)
@@ -24,10 +26,10 @@ def login(request):
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                     password=request.POST['password'])
-            messages.success(request, "You have successfully logged in!")
 
             if user:
                 auth.login(user=user, request=request)
+                messages.success(request, "You have successfully logged in!")
                 return redirect(reverse('index'))
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
