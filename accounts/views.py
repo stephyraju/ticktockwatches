@@ -67,8 +67,12 @@ def registration(request):
     return render(request, 'registration.html', {
             "registration_form": registration_form})
 
+@login_required
 def user_profile(request):
-    """The user's profile page"""
+    '''
+    Renders profile page for user with a form to update
+    their information.
+    '''
     user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
