@@ -34,9 +34,9 @@
             <div class="col-sm-12">
                 <form method="POST">
                         {% csrf_token %} 
-                        {{ registration_form | as_bootstrap }}
+                        {{ form | as_bootstrap }}
                         <br>
-                        <button type="submit" class="btn-block btn-dark">Sign Up</button>
+                        <button type="submit" class="btn-block btn-dark">Submit</button>
                 </form>
                 <br>
             </div>

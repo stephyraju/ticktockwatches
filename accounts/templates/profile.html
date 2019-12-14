@@ -1,0 +1,43 @@
+{% extends 'base.html' %} 
+{% load bootstrap_tags %} 
+{% load staticfiles %}
+{% block page_title %}Profile{% endblock %} 
+{% block content %}
+
+<!--Alert messages to the user -->
+<div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container log-form">
+    <div class="row mx-auto w-50 justify-content-center">
+        
+        <div class="col-sm-12 text-center">
+            <h2>Hello {{user_profile.username}}!</h2>
+            <p>You can update your Profile</p>
+        </div>
+            <!-- User can update profile info here -->
+            
+        <div class="col-sm-12">
+            <form method="POST">
+                    {% csrf_token %} 
+                    {{ form | as_bootstrap }}
+                    <br>
+                    <button type="submit" class="btn-block btn-dark">Submit</button>
+            </form>
+            <br>
+        </div>  
+       </div>
+    </div>
+
+{% endblock %}
