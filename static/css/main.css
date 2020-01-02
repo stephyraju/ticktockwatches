@@ -65,10 +65,12 @@ footer ul {
     font-size: 0.7rem;
 }
 /* validation error messages */
+
 .error-msg,.error{
     color: #ff6600;
   }
 
+/*Product Page*/
 .title-img img {
     display: block;
     width: 100%;
@@ -89,4 +91,20 @@ footer ul {
     cursor: pointer;
     border-radius: 0px;
     text-align: center;
+}
+.promotion-banner {
+    background-color: #111;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.ban-text {
+    color: #ccc;
+    padding-left: 10px;
+}
+.banner {
+    display: flex;
+    justify-content: center;
 }
