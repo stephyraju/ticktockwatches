@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- breadcrumbs -->
+        <div id="breadcrumbs" class="col-12">
+            <a href="/">Home </a>
+            <i class="fas fa-cheese fa-flip-horizontal"></i>
+            <a href="{% url 'cart' %}">Shopping cart </a>
+        </div>
+        <div class="col-11 col-md-8 col-lg-6 text-center">
+            {% if nothing_in_cart %}
+            <h1>Your cart is empty!</h1>
+            <a href="{% url 'all-products' %}" class="btn btn-dark btn-cta my-5">Let's go shopping</a>
+            {% else %}
+            <h1>Your shopping cart</h1>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- contents of shopping cart -->
+
+{% if not nothing_in_cart %}
+<div class="container mb-5">
+    <div class="row justify-content-center">
+
+        <div id="shopping-cart" class="col-11 col-md-8 col-lg-6 small-box-shadow">
+            <form id="confirmCartForm" method="POST">
+                {% csrf_token %}
+                <div class="row">
+
+                    <div class="form-group">
+                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Qty</div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control" required>
+                            <div class="input-group-addon">{{item.quantity}}</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-cta btn-blue mr-0">Checkout</button>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+{% endif %}
+</div>
+
+{% endblock %}
