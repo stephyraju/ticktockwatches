@@ -22,6 +22,9 @@ padding-bottom: 80px;
   #search-form {
     display: inline;
   }
+  #search-form input {
+    outline: none;
+  }
   #search-form button {
     background-color: transparent;
     border: none;
