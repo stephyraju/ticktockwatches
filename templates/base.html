@@ -57,21 +57,27 @@
               {% endif %}
             </div>
           </li>
-        
-        <li class="nav-item active">
-            <a class="nav-link" href="#">
-                <i class="fas fa-search navbar-search-icon" title="Search"></i>
-                <span class="sr-only">(current)</span>
-            </a>
-        </li>
-        <li class="nav-item">
+          
+          <li class="nav-item">
             <a class="nav-link" href="#">
                 <i class="fas fa-shopping-cart"></i> Cart
                
                 <label class="badge badge-warning"></label>
                 
             </a>
-         </li>
+         </li> 
+
+        <li class="nav-item active">
+          <form method="GET" id="search-form" action="#">
+            <input type="text" name="q">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+            <!-- <a class="nav-link" href="#">
+                <i class="fas fa-search navbar-search-icon" title="Search"></i>
+                <span class="sr-only">(current)</span>
+            </a> -->
+        </li>
+        
     </ul>
 
     

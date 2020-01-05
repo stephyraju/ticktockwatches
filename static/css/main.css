@@ -10,7 +10,23 @@ padding-top: 20px;
 padding-bottom: 80px;
 
 }
+/* search box */
+#search-form input {
+    border: solid 1px;
+    border-radius: 10px;
+    width: 180px;
+    padding: 1px 15px;
+    margin-left: 10px;
+  }
 
+  #search-form {
+    display: inline;
+  }
+  #search-form button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+  }
 /* Footer */
 #footer {
     background-color: #262626;
