@@ -134,3 +134,6 @@ footer ul {
 .product-img img:hover {
     background-color: honeydew;
 }
+.product-name {
+    text-align: center;
+}
