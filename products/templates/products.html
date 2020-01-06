@@ -29,31 +29,54 @@
 </section>
 
 <!--Product Showcase-->
-
 <section class="products-showcase">
-    <div class="row row-flex">
-        {% for product in products %}
-            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-                <div class="panel-body">
-                    <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-    
-                    <h3>{{ product.name }}</h3>
-                    <p class="product-description">{{ product.description }}</p>
-                    <p>{{ product.price }}</p>
-    
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="submit">Add</button>
-                            </span>
-                        </div>
-                    </form>
+    <div class="container">
+        <div class="row align-items-center">
+            {% for product in products %}
+            <div class ="col-md-3 col-6 mb-4 product-container">
+                <div class = "product-img">
+                    <a href="#"  class="image-product-link">
+                        <img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.name}}" /></a>
+                </div>
+                <div class="product-details">
+                    <h6>{{ product.name }}</h6>
+                    <div class="product-price">
+                      <p>€ {{ product.price }}</p>  
+                    </div>
                 </div>
             </div>
-        {% endfor %}
+            {% endfor %}    
+        </div>
     </div>
- </section>
+</section>
 
+<!-- <section class="products-showcase">
+    <div class="container">
+        <div class="row align-items-center">
+        <div class="card-deck">
+            {% for product in products %}
+                 <div class="col-lg-3 col-md-6 col-xs-12 text-center mx-auto">
+                     <div class="card text-center" style="width: 18rem;">
+                         <a href="#"  class="image-product-link">
+                             <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
+                         <div class="card-body">
+                             <h5 class="card-title product-name"><a href="#"  class="title-product-link">{{ product.name }}</a></h5>
+                             <p class="product-price">€ {{ product.price }}</p>
+                         </div>
+                         <form method="post" action="{% url 'add_to_cart' product.id %}">
+                         {% csrf_token %}
+                         <div class="input-group add-checkout-div">
+                             <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                             <span class="input-group-btn">
+                                 <button class="btn btn-dark rounded-0 btn-sm" type="submit">Add to Cart</button>
+                             </span>
+                         </div>
+                     </form>
+                     </div>
+                 </div>
+           {% endfor %}   
+        </div>
+     </div>  
+     </div>
+    </section> -->
 {% endblock %}

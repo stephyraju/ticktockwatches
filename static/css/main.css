@@ -127,3 +127,10 @@ footer ul {
     display: flex;
     justify-content: center;
 }
+.product-img img{
+    background-color: gray;
+    transition: 0.3s;
+}
+.product-img img:hover {
+    background-color: honeydew;
+}
