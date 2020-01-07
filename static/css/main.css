@@ -93,7 +93,7 @@ footer ul {
 .title-img img {
     display: block;
     width: 100%;
-    height: 35vh;
+    height: 40vh;
     object-fit: cover;
   }
 .title-container
@@ -101,8 +101,8 @@ footer ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 200%);
-    -ms-transform: translate(-50%, 200%);
+    transform: translate(-50%, 150%);
+    -ms-transform: translate(-50%, 150%);
     background-color: #111;
     color: white;
     padding: 12px 24px;
@@ -112,11 +112,11 @@ footer ul {
     text-align: center;
 }
 .promotion-banner {
-    background-color: #111;
+    background-color: #404040;
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .ban-text {
