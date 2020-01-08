@@ -19,15 +19,19 @@ from accounts.views import index
 from accounts import urls as urls_accounts
 from products import urls as urls_products
 from cart import urls as urls_cart
+# from home import urls as home_urls
 from search import urls as urls_search
 from products.views import all_products
+from home.views import home_page
 from django.views import static
 from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name="index"),
+    url(r'^$', home_page, name="home"),
+    url(r'^$', all_products, name="products" ),
     url(r'^accounts/', include(urls_accounts)),
+    # url(r'^home/', include(home_urls)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
