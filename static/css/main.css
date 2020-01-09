@@ -89,7 +89,8 @@ footer ul {
     color: #ff6600;
   }
 
-/*Product Page*/
+/*Home Page*/
+
 .title-img img {
     display: block;
     width: 100%;
@@ -133,8 +134,8 @@ footer ul {
     
 }
 .product-image {
-padding-top: 10px;
-padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .product-title {
     color: black; 
@@ -163,8 +164,22 @@ padding-bottom: 10px;
     display: flex;
     padding: 10px 30px;
     justify-content: space-between;
-    /* align-items: flex-end; */
+   
 }
+.shop-promo {
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+/*Product page*/
+
+.product-title img{
+    display: block;
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+
 
 /* .product-img {
     position: relative;
