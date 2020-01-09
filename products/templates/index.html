@@ -5,16 +5,32 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<!--Product Title Image-->
-<section class ="product-imgs">
+
+<section class ="homepage-imgs">
     <div class="container-fluid title-container">
         <div class="row">
-            <div class="col-12 product-title">
-                <img class="responsive-img" src="{% static 'img/product-banner.jpg' %}" alt="title image">
-            </div> 
+            <div class="col-md-6 title-img">
+                <img class="responsive-img" src="{% static 'img/ladies.jpg' %}" alt="title image">
+                <a class="btn btn-primary text-uppercase" href="#">Ladies Watches</a>
+            </div>
+            <div class="col-md-6 title-img">
+                <img class="responsive-img" src="{% static 'img/mens.jpeg' %}" alt="mens watches">
+                <a class="btn btn-primary text-uppercase" href="#">Mens Watches</a>
+            </div>
         </div>
     </div> 
     </section>
+<!--Promotion banner -->
+
+<section class = "container-fluid promotion-banner">
+    <div class = "row">
+      <div class = "col-12 text-center text-white banner">
+        <i class ="pt-1 fas fa-truck"></i>
+        <p class = ban-text>Free Next Day Delivery Over €100</p>
+      </div>
+    </div>
+</section>
+
 <!--Product-showcase-->
 <section class="products-showcase">
     <div class="container">
@@ -46,6 +62,15 @@
           
         </div>
      </div>    
- </section>    
-
+ </section>  
+ <!--Watch shop Promotion-->  
+<section>
+ <div class="jumbotron jumbotron-fluid shop-promo">
+    <div class="container text-center">
+      <h2 class="display-4">Tick Tock</h2>
+      <p class="lead">Watch Shop <br> Ireland's Largest Independent Online Watch Shop</p>
+      <p>Welcome to Watch Shop - home to a wide range of high quality watches from leading designer brands including Casio, Citizen, Rotary, Emporio Armani and Olivia Burton. We are official stockists for all our partner brands. Why risk buying anywhere else?</p>
+    </div>
+  </div>
+</section>
 {% endblock %}

@@ -21,7 +21,8 @@ from cart import urls as urls_cart
 # from home import urls as home_urls
 from search import urls as urls_search
 from products.views import all_products
-from home.views import home_page
+from products.views import all_products2
+# from home.views import home_page
 from django.views import static
 from .settings import MEDIA_ROOT
 
@@ -32,6 +33,7 @@ urlpatterns = [
     url(r'^accounts/', include(urls_accounts)),
     # url(r'^home/', include(home_urls)),
     url(r'^products/', include(urls_products)),
+    url(r"^products_list/$", all_products2, name="all_products2"),
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
