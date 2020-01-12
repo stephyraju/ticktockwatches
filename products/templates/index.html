@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-6 title-img">
                 <img class="responsive-img" src="{% static 'img/mens.jpeg' %}" alt="mens watches">
-                <a class="btn btn-primary text-uppercase" href="#">Mens Watches</a>
+                <a class="btn btn-primary text-uppercase" href="{% url 'menswatch' %}">Mens Watches</a>
             </div>
         </div>
     </div> 
@@ -43,7 +43,7 @@
                          <a href="#"  class="product-image">
                              <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                          <div class="card-body product-details">
-                             <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.name }}</a></h6>
+                             <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
                          
                              <p class="product-price">€ {{ product.price }}</p>
                          </div>
