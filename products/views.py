@@ -39,3 +39,8 @@ def view_tedbaker(request):
     """View to display only Ted Baker"""
     products = Product.objects.all().filter(category='Ted Baker')
     return render(request, "products.html", {"products": products})
+
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    product.save()
+    return render(request, "productdetail.html", {'product': product})
