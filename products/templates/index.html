@@ -40,7 +40,7 @@
            {% for product in products %}
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
                     <div class="card" style="width: 18rem;">
-                         <a href="#"  class="product-image">
+                         <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                          <div class="card-body product-details">
                              <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
