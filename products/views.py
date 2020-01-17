@@ -3,9 +3,9 @@ from .models import Product
 from django.conf import settings
 
 # Create your views here.
-def all_products(request):
-    products = Product.objects.all()
-    return render(request, "index.html", {"products": products})
+# def all_products(request):
+#     products = Product.objects.all()
+#     return render(request, "index.html", {"products": products})
 
 def all_products2(request):
     products = Product.objects.all()
@@ -50,6 +50,6 @@ def view_featured(request):
     """ Renders home page with 4 random featured products in featured listing section """
 
     # featured_products = Product.objects.filter(featured=True).order_by('-featured'[:4])
-    featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
+    featured_products = Product.objects.filter(featured=True)
 
     return render(request, "index.html", {'featured_products': featured_products})
