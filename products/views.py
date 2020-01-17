@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product
+from django.conf import settings
 
 # Create your views here.
 def all_products(request):
@@ -44,3 +45,11 @@ def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
     product.save()
     return render(request, "product_detail.html", {'product': product})
+
+def view_featured(request):
+    """ Renders home page with 4 random featured products in featured listing section """
+
+    # featured_products = Product.objects.filter(featured=True).order_by('-featured'[:4])
+    featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
+
+    return render(request, "index.html", {'featured_products': featured_products})
