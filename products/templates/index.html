@@ -31,13 +31,16 @@
     </div>
 </section>
 
-<!--Product-showcase-->
+<!--Product-showcase featured watches-->
 <section class="products-showcase">
-    <div class="container">
+    <div class="container featured-products">
         <div class="row">
-         <div class="card-deck">
+           <div class="col-12 ml-5 pb-5">
+                <h3>Shop our featured watches</h3>
+            </div>
+             <div class="card-deck"> 
      
-           {% for product in products %}
+                {% for product in featured_products %}
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
                     <div class="card" style="width: 18rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
