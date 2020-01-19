@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<!--About us content-->
+<section class= "about-container">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="ml-2 mb-4">Tick Tock</h1>
+            <hr>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+            <img class="w-100 mt-5 pt-3" src="{% static 'img/aboutimg.jpeg' %}" alt="watch image">
+        </div>
+        
+        <div class="col-12 col-md-8">
+            <h2 class="mb-4">About Us</h2>
+            <h6>The Watch Store Est.1985 Dublin, Ireland and Belfast, Northern Ireland.</h6>
+            <p>The Tick Tock Watch Store is a leading retailer of brand name Designer watches such as Michael Kors, Casio, Rolex, Timex, Tissot, Citizen, Lacoste and much more!. At The Watch Store we have a range of gifts to aquire for any taste for all occassions. Our stores in Dublin and Belfast also contain a wide range of services with an excellent team with superior experience to facilitate customers choices and help decide whats best for themselves or that special someone</p>
+            <br>
+            <h5>Shop Open Hours</h5>
+            <p> Monday,Tuesday & Wednesday 10am - 6pm
+            <p>Thursday 10am - 8pm</p>
+            <p>Friday & Saturday 10am - 6pm</p> 
+            <p>Sunday 11am - 6pm</p>
+        
+            <div class="col-12">
+                <a href="{% url 'all_products2' %}" class="btn btn-cta btn-dark my-5">Shop Watches</a>
+            </div>
+      </div>
+    </div>
+ </div>
+</section>
+
+{% endblock %}
