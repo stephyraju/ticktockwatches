@@ -45,7 +45,10 @@
                     <div class="card" style="width: 18rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
-                         <div class="card-body product-details">
+                             {% if product.bestseller %}
+                             <div class="product-label text-center">Bestseller</div>
+                             {% endif %}
+                             <div class="card-body product-details">
                              <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
                          
                              <p class="product-price">€ {{ product.price }}</p>
@@ -76,4 +79,79 @@
     </div>
   </div>
 </section>
+<!--Top Brands-->
+<section class= "top-brands">
+    <div class="container my-3">
+    <div class="row mx-auto my-auto p-5">
+        <div class="col-12 pb-5">
+            <h3>Top Brands</h3>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2 ">
+          <div class="card mt-2 brand-card">
+            <a href="{% url 'rolex' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Rolex</h5>
+            </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2">
+            <div class="card mt-2">
+              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2">Rolex</h5>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2">
+            <div class="card mt-2">
+              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2">Rolex</h5>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2 ">
+            <div class="card mt-2">
+              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2">Rolex</h5>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2 ">
+            <div class="card mt-2">
+              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2">Rolex</h5>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-lg-2">
+            <div class="card mt-2">
+              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+              <div class="overlay"></div>
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2">Rolex</h5>
+              </div>
+            </div>
+        </div>
+
+    </div>
+ </div>
+</section>
+
+
 {% endblock %}
