@@ -41,6 +41,14 @@ padding-bottom: 80px;
 footer li {
     list-style: none;
 }
+footer li a{
+    color: gray;
+    text-decoration:none; 
+}
+footer li a:hover{
+    color: blanchedalmond; 
+    text-decoration:none; 
+}
 footer ul {
     padding: 0;
     margin: 0;
@@ -201,13 +209,12 @@ footer ul {
     z-index: 0;
     pointer-events: none;
 }
-a {
+.brand-card a {
     color: black;
     text-decoration: none;
 }
 
-a:hover 
-{
+.brand-card a:hover {
      color: black; 
      text-decoration:none; 
      cursor:pointer;  
