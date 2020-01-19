@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Return Policy</h1>
+            <hr>
+            <h2>Returns & refunds</h2>
+            <p class ="py-3"> 
+                Changed your mind? No problem. Our goodwill returns policy, which is in addition to your statutory rights, entitles you to a refund or exchange for an item bought in store or online with a valid receipt or parcel summary document within 35 days of purchase or receipt, excluding sale items. Some items are excluded from the goodwill returns policy; this does not affect your statutory rights.
+            </p>
+            <h2>Returns</h2>
+            <p class ="py-3">
+                You can refund or exchange products bought online or in store with a valid receipt or parcel summary document within 35 days, excluding sale items. For sale items, you have 14 days. It’s free, and easy to return items to us
+            </p>
+            <h5>Conditions for the return of items</h5>
+            <p>The item(s) must be in unworn and in the same condition in which they were received. Items must be returned with all the original packaging, instructions, guarantee and any extras.</p>
+            <p>Certain watches require adjustment to ensure good fit. Please refer to our bracelet adjustment policy at the following link to maintain your refund eligibility.</p>
+            <h5>How to return items</h5>
+            <p>Items must be returned with a cover note detailing the reason for the return. We will reimburse standard postage costs to the original card the item was paid for or where this is not possible, a reimbursement will be made by cheque.</p>
+            <h4>Return Address:</h4>
+            <p>Tick Tock</p>
+            <p>PO BOX 6890</p>
+            <p>Dublin</p>
+            <p>Ireland</p>
+        </div>
+        <div class="col-12 p-3">
+            <a href="{% url 'all_products2' %}" class="btn btn-cta btn-dark my-5">Shop Watches</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
