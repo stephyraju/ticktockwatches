@@ -41,10 +41,10 @@
              <div class="card-deck"> 
      
                 {% for product in featured_products %}
-                 <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
+                 <div class="col-xs-12 col-md-4 col-lg-3 mx-auto featured-card">
                     <div class="card" style="width: 18rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
-                             <img src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
+                             <img class="card-img"src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                              {% if product.bestseller %}
                              <div class="product-label text-center">Bestseller</div>
                              {% endif %}
