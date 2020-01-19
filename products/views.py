@@ -33,12 +33,37 @@ def view_rolex(request):
 
 def view_timex(request):
     """View to display only Timex"""
-    products = Product.objects.all().filter(category='Timex')
+    products = Product.objects.all().filter(brand='Timex')
     return render(request, "products.html", {"products": products})
 
 def view_tedbaker(request):
     """View to display only Ted Baker"""
-    products = Product.objects.all().filter(category='Ted Baker')
+    products = Product.objects.all().filter(brand='Ted Baker')
+    return render(request, "products.html", {"products": products})
+
+def view_tissot(request):
+    """View to display only Tissot"""
+    products = Product.objects.all().filter(brand='Tissot')
+    return render(request, "products.html", {"products": products})
+
+def view_michaelkores(request):
+    """View to display only Michael Kores"""
+    products = Product.objects.all().filter(brand='Michael Kores')
+    return render(request, "products.html", {"products": products})
+
+def view_lacoste(request):
+    """View to display only Lacoste"""
+    products = Product.objects.all().filter(brand='Lacoste')
+    return render(request, "products.html", {"products": products})
+
+def view_lotus(request):
+    """View to display only Lotus"""
+    products = Product.objects.all().filter(brand='Lotus')
+    return render(request, "products.html", {"products": products})
+
+def view_citizen(request):
+    """View to display only Citizen"""
+    products = Product.objects.all().filter(brand='Citizen')
     return render(request, "products.html", {"products": products})
 
 def product_detail(request, pk):

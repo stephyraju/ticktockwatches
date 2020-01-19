@@ -14,9 +14,8 @@ class Product(models.Model):
     Michael_Kors = "Michael Kors"
     Lacoste =  "Lacoste"
     Lotus =  "Lotus"
-    Hugo =  "Hugo"
-    Gucci = "Gucci"
-    Diesel =  "Diesel"
+    Citizen =  "Citizen"
+    
     
     CATEGORY_CHOICES = [
         ("Mens Watches", "Mens Watches" ),
@@ -32,9 +31,8 @@ class Product(models.Model):
         (Michael_Kors, "Michael Kors"),
         (Lacoste, "Lacoste"),
         (Lotus, "Lotus"),
-        (Hugo, "Hugo"),
-        (Gucci, "Gucci"),
-        (Diesel, "Diesel")
+        (Citizen, "Citizen"),
+        
     ]
     
     category = models.CharField(
