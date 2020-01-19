@@ -141,14 +141,14 @@ footer ul {
     color: black; 
 }
 .card {
-    border: 0px solid;
+    border: 1px solid rgba(0,0,0,.125);
     border-radius: 0px;
     margin: 0 auto; 
     margin-bottom: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+   
   }
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
   }
   .product-details {
       padding-left: 2em
@@ -182,8 +182,47 @@ footer ul {
     height: 45vh;
     object-fit: cover;
 }
+/*top-brand*/
+.overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.08;
+    top: 0;
+    transition: 0.5s;
+    z-index: 0;
+    pointer-events: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
 
+a:hover 
+{
+     color: black; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
 
+.product-label {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 110px;
+    z-index: 2;
+    background: #111;
+    color: #fff;
+}
+/* .brand-card a:link {
+    text-decoration: none;
+    color: inherit; 
+}
+.brand-card:active {
+    text-decoration: none;
+  } */
 /* .product-img {
     position: relative;
     max-width: 100%;
@@ -206,3 +245,25 @@ footer ul {
 .product-name {
     text-align: left;
 } */ 
+/* .home-brand-wrapper-lg,
+.home-brand-wrapper {
+  height: 250px;
+  padding: 15px;
+}
+.category-img {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    -webkit-transition: 0.2s all ease-in-out 0.2s;
+    transition: 0.2s all ease-in-out 0.2s;
+    background-position: center 35%;
+  }
+  .category-heading-box {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+#rolex-img {
+    background-image: url('/static/img/fossil.jpg')
+}     */
