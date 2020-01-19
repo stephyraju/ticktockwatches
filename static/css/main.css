@@ -89,7 +89,7 @@ footer ul {
     color: #ff6600;
   }
 
-/*Home Page*/
+/****  Home Page ****/
 
 .title-img img {
     display: block;
@@ -136,12 +136,7 @@ footer ul {
 .products-showcase {
     padding-top: 70px;
     padding-bottom: 70px;
-    
 }
-/* .product-image {
-    padding-top: 10px;
-    padding-bottom: 10px;
-} */
 .product-title {
     color: black; 
 }
@@ -152,13 +147,10 @@ footer ul {
     margin-bottom: 10px;
    
   }
-  .card:hover {
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
   }
-  .product-details {
-      padding-left: 2em
-  }
-  .add-cart {
+.add-cart {
     padding-right: 1em;
     padding-left: 2em;
     padding-bottom: 1em;
@@ -169,6 +161,13 @@ footer ul {
     padding: 10px 30px;
     justify-content: space-between;
    
+}
+.card-img {
+    height: 200px;
+}
+.product-details {
+    height: 100px;
+    padding-left: 2em
 }
 .shop-promo {
     padding-top: 10px;
