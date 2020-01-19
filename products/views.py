@@ -28,7 +28,7 @@ def view_kidswatch(request):
 
 def view_rolex(request):
     """View to display only Rolex"""
-    products = Product.objects.all().filter(category='Rolex')
+    products = Product.objects.all().filter(brand='Rolex')
     return render(request, "products.html", {"products": products})
 
 def view_timex(request):
@@ -50,6 +50,12 @@ def view_featured(request):
     """ Renders home page with 4 random featured products in featured listing section """
 
     # featured_products = Product.objects.filter(featured=True).order_by('-featured'[:4])
-    featured_products = Product.objects.filter(featured=True)
-
-    return render(request, "index.html", {'featured_products': featured_products})
+    # featured_products = Product.objects.filter(featured=True)
+    featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
+    bestseller = Product.objects.filter(bestseller=True)
+    context = {
+        'featured_products': featured_products,
+        'bestseller': bestseller,
+        'category': 'All products'
+    }
+    return render(request, "index.html", context)
