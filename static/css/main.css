@@ -229,6 +229,14 @@ footer ul {
     background: #111;
     color: #fff;
 }
+#breadcrumbs a {
+    text-decoration: none;
+    color: gray;
+}
+#breadcrumbs a:hover {
+    text-decoration: none;
+    color: black;
+}
 /* .brand-card a:link {
     text-decoration: none;
     color: inherit; 
