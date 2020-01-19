@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!-- breadcrumbs -->
+        <div id="breadcrumbs" class="col-12 pt-3">
+            <a href="/">Home </a>
+            <a class="pl-3" href="{% url 'faqs' %}">FAQs </a>
+        </div>
+        <div class="col-12 pt-4">
+            <h1>Frequently Asked Questions</h1>
+            <hr>
+            <h4>Are these watches actually in stock?</h4>
+            <p>At Tick Tock, we stock all of our watches listed on this website  and we currently hold over 100,000 watches in stock. So, unlike some of our competitors, we ship our watches directly from our stock so you can be assured of speedy delivery. We hold our stock in a high security warehouse, and our stock turnover is rapid - so you won't receive an old watch with a half-dead battery, or one that has been sitting on a jeweller's shelves for years. Tick Tock dispatches nearly 100% of orders on time.</p>
+            <h4>Do your watches come with guarantees?</h4>
+            <p>Yes, all of our watches come with the full international manufacturer's guarantee with our official distributors stamp. You can purchase from us assured with the knowledge that your watch is fully guaranteed for the full period against workmanship faults.</p>
+            <h4>How do you send the watches?</h4>
+            <p>Items are shipped by Royal Mail and you also have the option in the checkout to use a courier if you prefer. Next day delivery is available on all orders. This method of delivery is fully insured. Certain items under £60 are sent by Royal Mail First Class Delivery by default, however you can always upgrade to Special Delivery in the checkout. 9am delivery is also available in the checkout process.</p>
+            <h4>Can I pay by cheque?</h4>
+            <p>We no longer accept cheques as payment</p>
+            <h4>How much is delivery?</h4>
+            <p>Delivery is free of charge for all orders within Republic of Ireland. Delivery to international locations is calculated in the checkout.</p>
+            <h4>Can you deliver on a Sunday?</h4>
+            <p>Unfortunately, we are unable to deliver on Sundays at this time.</p>
+        </div>
+        <div class="col-12 p-3">
+            <a href="{% url 'all_products2' %}" class="btn btn-cta btn-dark my-5">Shop Watches</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
