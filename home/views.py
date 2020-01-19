@@ -6,5 +6,10 @@ def view_about(request):
     return render(request, "about.html")
 
 def view_delivery(request):
-    """A View that renders the delivery page"""
+    """A View that renders the delivery policy page"""
     return render(request, "delivery.html")
+
+def view_return(request):
+    """A View that renders the reurn policy page"""
+    return render(request, "return.html")
+
