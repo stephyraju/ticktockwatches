@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">Delivery Policy</h1>
+            <hr>
+            <p class ="py-5"> 
+                Although Tick Tock Watch Shop and Tick Tock Watch Shop Logistics Ltd are able to ship almost every order in the timeframe specified, in rare circumstances our shipping capacity can be exceeded, causing a delay of one extra day. Should this occur, your order will be marked for urgent delivery on the following day and we will reimburse you for the cost of postage.
+
+The delivery timescales presented here do not apply to orders which require additional security checks. If a security check is required, it will usually follow that we will need you to provide additional information; despatch will not occur until this information is received.
+
+Tick Tock is unable to provide compensation for late deliveries. Compensation will not be provided for consequential losses (e.g., time taken off work or if the item is a gift and you purchase the same item from a more expensive retailer).
+
+If, for any reason, your order is returned to us (e.g., incorrect address), then Tick Tock Watch Shop and Tick Tock Watch Shop Logistics Ltd will inform you immediately via email when the item is received. You will be given a choice as to whether the item is sent out again, or a refund is processed. Please note, for items that are undelivered through fault of the customer (e.g., incorrect address), Tick Tock Watch Shop and Tick Tock Watch Shop Logistics Ltd reserve the right to deduct our outwardly shipping fees from the refund total.
+            </p>
+             <h4 class="pb-3">Shipping Charges</h4>
+             <h6 class="pb-3">Ireland</h6>
+             <p>FREE delivery for all orders over 100 euros.</p>
+             <p>Sent by registered post via An Post.</p>  
+             <p>Signature required upon delivery.</p>
+             <p>Delivery less than 2 days after your item is shipped.</p> 
+            <br>
+             <h6 class="pb-3">UK</h6>
+             <p>FREE delivery for all orders over 100 euros.</p> 
+             <p>Signature required upon delivery.</p>
+             <p>Delivery less than 2 days after your item is shipped.</p> 
+             <br>
+             <h6 class="pb-3">Rest of EU</h6>
+             <p>FREE delivery for all orders over 100 euros.</p> 
+             <p>Signature required upon delivery.</p>
+             <p>Expected delivery 7 days after your item is shipped.</p>
+             <br>
+             <h6 class="pb-3">Rest of the world</h6>
+             <p>€20 delivery charge to orders going outside the EU.</p> 
+             <p>FREE DELIVERY for orders over €350.</p>
+             <p>Expected delivery 10 days after your item is shipped.</p>
+             <p>Signature required upon delivery.</p>
+        </div>
+        <div class="col-12 p-3">
+            <a href="{% url 'all_products2' %}" class="btn btn-cta btn-dark my-5">Shop Watches</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
