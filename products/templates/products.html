@@ -6,7 +6,7 @@
 
 {% block content %}
 <!--Product Title Image-->
-<section class ="product-imgs">
+<!-- <section class ="product-imgs">
     <div class="container-fluid title-container">
         <div class="row">
             <div class="col-12 product-title">
@@ -14,6 +14,35 @@
             </div> 
         </div>
     </div> 
+</section> -->
+<!--Promotion banner -->
+
+<section class = "container-fluid delivery-banner">
+    <div class = "row">
+      <div class = "col-12 text-center text-white banner">
+        <i class ="pt-1 fas fa-truck"></i>
+        <p class = ban-text>Free Next Day Delivery Over €100</p>
+      </div>
+    </div>
+</section>
+<!--Category-->
+<section class=" container-fluid category-list mt-5">
+    <div class="col-12 text-center">
+        <a href="{% url 'all_products2' %}" class="btn btn-hover">All</a>
+        <a href="{% url 'menswatch' %}" class="btn btn-hover">Mens</a>
+        <a href="{% url 'all_products2' %}" class="btn btn-hover">Ladies</a>
+        <a href="{% url 'all_products2' %}" class="btn btn-hover">Kids</a>
+        <div class="dropdown" style="display:inline-block">
+        <a href="{% url 'all_products2' %}" class="btn dropbtn btn-hover">Brands</a>
+        <div class="dropdown-content">
+            <a href="{% url 'rolex' %}">Rolex</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
 </section>
 <!--Product-showcase-->
 <section class="products-showcase">
