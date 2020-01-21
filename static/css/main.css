@@ -220,6 +220,7 @@ footer ul {
   .btn-hover:hover {
       color: grey;
   }
+  
 /* .product-title img{
     display: block;
     width: 100%;
@@ -245,7 +246,7 @@ footer ul {
 }
 
 .brand-card a:hover {
-     color: black; 
+     color: grey; 
      text-decoration:none; 
      cursor:pointer;  
 }
@@ -267,6 +268,18 @@ footer ul {
     text-decoration: none;
     color: black;
 }
+
+ @media (min-width: 1200px) { 
+
+.cart-container {
+  margin-top: 1.5rem;
+  padding: 50px;
+  background-color: #f8f9fa;
+  box-shadow:rgba(0,0,0,0.1);
+}
+
+ }
+
 /* .brand-card a:link {
     text-decoration: none;
     color: inherit; 
