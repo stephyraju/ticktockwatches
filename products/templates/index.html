@@ -53,7 +53,7 @@
                          
                              <p class="product-price">€ {{ product.price }}</p>
                          </div>
-                         <form method="post" action="#">
+                         <form method="post" action="{% url 'add_to_cart' product.id %}">
                          {% csrf_token %}
                          <div class="input-group add-cart">
                              <input class="input-add-checkout"  name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
