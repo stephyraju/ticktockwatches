@@ -9,13 +9,12 @@
         <!-- breadcrumbs -->
         <div id="breadcrumbs" class="col-12">
             <a href="/">Home </a>
-            <i class="fas fa-cheese fa-flip-horizontal"></i>
-            <a href="{% url 'cart' %}">Shopping cart </a>
+            <a href="{% url 'view_cart' %}">Shopping cart </a>
         </div>
         <div class="col-11 col-md-8 col-lg-6 text-center">
             {% if nothing_in_cart %}
             <h1>Your cart is empty!</h1>
-            <a href="{% url 'all-products' %}" class="btn btn-dark btn-cta my-5">Let's go shopping</a>
+            <a href="{% url 'all_products2' %}" class="btn btn-dark my-5">Let's go shopping</a>
             {% else %}
             <h1>Your shopping cart</h1>
             {% endif %}
