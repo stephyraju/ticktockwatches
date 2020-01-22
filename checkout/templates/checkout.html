@@ -15,42 +15,16 @@
 {% block content %}
 
 
-<!-- Payment Form section -->
+<!-- Customer Details section -->
 
-<div class="">
+<div class="container checkout-form">
     <div class="container">
       <div class="py-5 text-center">
-        <h2>Checkout form</h2>
-        <p class="lead">Please fill up the details below to finilise your order.</p>
+        <h2>Checkout Form</h2>
       </div>
-
       <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Your cart</span>
-            <span class="badge badge-secondary badge-pill">3</span>
-          </h4>
-          
-          <ul class="list-group mb-3">
-        {% for item in cart_items %}
-              <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                  <h6 class="my-0">{{ item.product.name }} ({{ item.quantity }})</h6>
-                  <small class="text-muted">{{ item.product.description|truncatewords:10 }}</small>
-                </div>
-                <span class="text-muted">{{ item.product.price }}</span>
-              </li>
-           {% endfor %}
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (EUR)</span>
-              <strong>€{{ total }}</strong>
-            </li>
-          </ul>
-        </div>
-        
-        
-        <div class="col-md-8 order-md-1 pb-2">
-        <form role="formc checkout-form mb-2" method="post" id="payment-form" action="{% url 'checkout' %}">
+        <div class="col-md-10 pb-2">
+          <form role="formc checkout-form mb-2" method="post" id="payment-form" action="{% url 'checkout' %}">
             <legend>Payment Details</legend>
             <hr class="mb-4">
         
@@ -68,14 +42,74 @@
             <div class="form-group">
                 {{ payment_form | as_bootstrap }}
             </div>
-        
-            {% csrf_token %}
-            <div class="form-group ">
-                <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+
+           <!--Order Summary--> 
+            
+            <div class="col-12 my-5">
+              <h4>Your order summary</h4>
             </div>
-    </form>
+            <div class="col-12 mb-5">
+              <table class="table summary-table border">
+                <thead class="thead-light">
+                  <tr>
+                  
+                    <th scope="col">Product</th>
+                    <th scope="col"></th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in cart_items %}  
+                    <tr>
+                          <td><img src="{{MEDIA_URL}}{{item.product.image}}" class="card-img-top product-image" alt="{{product.name}}" style="width: 4em;" /></td>
+                          <td>{{ item.product.title }}</td>
+                          <td> {{ item.quantity }} </td>
+                          <td>€ {{ item.product.price }}</td>
+                    {% endfor %}
+                  </tbody>
+              </table>
+            
+                <div class="col-5 offset-7 text-right">
+                <div class="row">
+                  <div class="col-6 text-left">
+                    <strong>Sub Total </strong>
+                  </div>
+                  <div class="col-6 text-right">
+                    <p>€  {{ total }}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 text-left">
+                    <strong>Delivery charges </strong>
+                  </div>
+                  <div class="col-6 text-right">
+                    <p>€  0.00</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 text-left">
+                  <strong>Total </strong>
+                  </div>
+                  <div class="col-6 text-right">
+                    <p>€  {{ total }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--order summary end-->
+            
+            {% csrf_token %}
+            <div class="form-group">
+             <input class=" btn btn-block btn-dark" id="submit_payment_btn" name="commit" type="submit" value="Proceed to Payment">
+           </div>
+        </form>
         </div>
+     </div>   
+  </div>
 </div>
-</div>
+
+
+
 
 {% endblock %}
