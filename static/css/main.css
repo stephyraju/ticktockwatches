@@ -279,7 +279,32 @@ footer ul {
 }
 
  }
+ .fav-form button:focus,
+ fav-form button:active {
+   outline: none;
+ }
+ 
+ .favorite {
+   color: rgb(224, 222, 216);
+ }
+ .favorite .fa,
+.favorited .fa {
+  font-size: 1.8em;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
 
+.favorite .fa:hover {
+  color: rgb(240, 208, 204);
+}
+
+.favorited {
+  color: rgb(243, 79, 73);
+}
+ /* .favorite,
+ .favorited {
+   float: right;
 /* .brand-card a:link {
     text-decoration: none;
     color: inherit; 
