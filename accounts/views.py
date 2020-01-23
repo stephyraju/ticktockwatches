@@ -85,3 +85,4 @@ def user_profile(request):
 
     return render(request, 'profile.html', {'form':form,
                                             'user_profile':user_profile})
+
