@@ -1,7 +1,9 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from .models import Product
+from django.http import HttpResponseRedirect
 from django.conf import settings
+from favourites.views import add_remove_favourites
 
 # Create your views here.
 # def all_products(request):

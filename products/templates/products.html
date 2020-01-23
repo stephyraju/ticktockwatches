@@ -56,6 +56,20 @@
              {% for product in products %}
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
                     <div class="card" style="width: 18rem;">
+
+                        <!-- form to add/remove products to the favourites list -->
+                        <form class="text-right fav-form" method="POST" action="{% url 'add_remove_favourites' product.id %}">
+                            {% csrf_token %}
+                            <button type="submit">
+                                <!-- check if the product is already a favourite -->
+                                {% if product in user.profile.favourites.all %}
+                                    <span class="favorited text-right"><i class="fa fa-heart"></i></span>
+                                {% else %}
+                                    <span class="favorite text-right"><i class="fa fa-heart"></i></span>
+                                {% endif %}
+                            </button>
+                        </form>
+
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img class ="card-img" src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
                          <div class="card-body product-details">
