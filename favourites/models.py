@@ -11,7 +11,6 @@ from django.contrib.auth.models import User
 #         return "%s %s" % (self.user)
 
 class Favourites(models.Model):
-
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     product =  models.ForeignKey(Product, null=False)
 

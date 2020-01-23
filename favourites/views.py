@@ -30,13 +30,13 @@ def add_remove_favourites(request, id):
     
     product = get_object_or_404(Product, id=id)
     user_profile = User.objects.get(email=request.user.email)
-    new_favourite = Favourite(user=user_profile, product=product)
+    new_favourite = Favourites(user=user_profile, product=product)
     favourites.add(new_favourite)
 
-    if favourite.filter(user=user_profile).exists():
-        favourite.remove(request.user)
+    if favourites.filter(user=user_profile).exists():
+        favourites.remove(request.user)
     else:
-        favourite.add(request.user)
+        favourites.add(request.user)
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     #  return HttpResponseRedirect(product.get_absolute_url())
