@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from favourites.models import Favourites
+from favourites.views import Favourites
 from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
 # Create your views here.
@@ -85,5 +85,6 @@ def user_profile(request):
         form = UserUpdateForm(instance=request.user)
 
     return render(request, 'profile.html', {'form':form,
-                                            'user_profile':user_profile})
+                                            'user_profile':user_profile,
+                                            'favourites':favourites })
 

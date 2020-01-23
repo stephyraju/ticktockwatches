@@ -58,8 +58,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                {% if favourites in user.favourites.all %}
-                    {% for favourite in user.favourites.all %}
+                {% if favourites  %}
+                    {% for favourite in favourites %}
                         <a href="{% url 'detail' favourite.id %}">
                             <div class="favourite-read-link row justify-content-center align-items-center">
                                 <div class="col-4">
