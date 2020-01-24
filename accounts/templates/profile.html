@@ -60,10 +60,10 @@
             <div class="modal-body">
                 {% if favourites  %}
                     {% for favourite in favourites %}
-                        <a href="{% url 'detail' favourite.id %}">
+                        <a href="{% url 'product_detail' product.id %}">
                             <div class="favourite-read-link row justify-content-center align-items-center">
                                 <div class="col-4">
-                                    <img width="50" src="#" alt="watch image">
+                                    <img width="50" src="{{MEDIA_URL}}{{product.image}}" alt="watch image">
                                 </div>
                                 <div class="col-6">
                                     {{ favourite.title }}
