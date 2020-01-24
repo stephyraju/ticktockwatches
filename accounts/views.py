@@ -8,9 +8,9 @@ from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
 # Create your views here.
 
-def index(request):
-    '''Return the home page'''
-    return render(request, 'index.html')
+# def index(request):
+#     '''Return the home page'''
+#     return render(request, 'index.html')
 
 @login_required
 def logout(request):
