@@ -12,6 +12,7 @@ from favourites.views import add_remove_favourites
 #     return render(request, "index.html", {"products": products})
 
 def all_products2(request):
+    favourites = Favourites.objects.all()
     products = Product.objects.all()
     paginator = Paginator(products, 8)  # Show 8 products per page
     
@@ -22,7 +23,8 @@ def all_products2(request):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
-    return render(request, "products.html", {"products": products})
+    return render(request, "products.html", {"products": products,
+                                            'favourites':favourites})
     
 def view_menswatch(request):
     """View to display only Mens"""
