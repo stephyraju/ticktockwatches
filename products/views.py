@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from .models import Product
-# from favourites.models import Favourites
+from favourites.models import Favourites
 from django.http import HttpResponseRedirect
 from django.conf import settings
 from favourites.views import add_remove_favourites
