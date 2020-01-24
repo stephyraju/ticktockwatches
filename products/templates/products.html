@@ -62,7 +62,7 @@
                             {% csrf_token %}
                             <button type="submit">
                                 <!-- check if the product is already a favourite -->
-                                {% if favourites %}
+                                {% if product in favourites %}
                                     <span class="favorited text-right"><i class="fa fa-heart"></i></span>
                                 {% else %}
                                     <span class="favorite text-right"><i class="fa fa-heart"></i></span>

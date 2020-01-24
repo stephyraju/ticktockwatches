@@ -12,7 +12,7 @@ from favourites.views import add_remove_favourites
 #     return render(request, "index.html", {"products": products})
 
 def all_products2(request):
-    favourites = Favourites.objects.all()
+    favourites = Favourites.objects.filter(user=request.user)
     products = Product.objects.all()
     paginator = Paginator(products, 8)  # Show 8 products per page
     
