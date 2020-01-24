@@ -302,6 +302,23 @@ footer ul {
 .favorited {
   color: rgb(243, 79, 73);
 }
+.modal-container .shape {
+  max-width: 250px;
+  margin: 18px;
+  padding: 10px;
+  background-color: #262626;
+}
+/* .modal-container .shadow:hover,
+.detail-profile-wrapper .shadow:hover {
+  background-color: ;
+} */
+.fav {
+  display: inline;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #ddd;
+  /* color: rgb(0, 128, 129); */
+}
  /* .favorite,
  .favorited {
    float: right;
