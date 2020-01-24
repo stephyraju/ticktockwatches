@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from favourites.views import Favourites
+from favourites.models import Favourites
+from django.http import HttpResponseRedirect
 from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
 # Create your views here.
@@ -74,6 +75,7 @@ def user_profile(request):
     Renders profile page for user with a form to update
     their information.
     '''
+    favourites = Favourites.objects.all()
     user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
