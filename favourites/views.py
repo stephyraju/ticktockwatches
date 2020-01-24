@@ -30,7 +30,8 @@ def add_remove_favourites(request, id):
     
     product = get_object_or_404(Product, id=id)
     user_profile = User.objects.get(email=request.user.email)
-    favourites = Favourites.objects.all()
+    favourites = Favourites.objects.filter(user=request.user)
+    # favourites = Favourites.objects.filter(user=user_profile)
     # new_favourite = Favourites(user=user_profile, product=product)
     # favourites.add(new_favourite)
 
