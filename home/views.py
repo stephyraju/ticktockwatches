@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils import timezone
 from django.conf import settings
+from django.core.mail import send_mail
 from .forms import ContactForm
 from django.contrib import auth, messages
 
@@ -35,11 +36,20 @@ def view_contact(request):
             contact_form = ContactForm(request.POST)
 
             if contact_form.is_valid():
-                contact = contact_form
-                contact.contact_date = timezone.now()
-                messages.success(request, 'We will be in touch shortly')
-                # return redirect(reverse('index'))
-
+                message = request.POST['message']
+                email_from = request.user.email
+                recipient_list = ['stephyraju@gmail.com']
+                send_mail ( message, email_from, recipient_list)
+                
+                fail_silently=False
+                
+                messages.success(request, 
+                                "Your message has been sent!",
+                                extra_tags="alert-success")
+                return redirect(reverse('contact'))
+        else:
+            messages.error(request, "Unable to send message at this time",
+                                    extra_tags="alert-danger")
     else:
         contact_form = ContactForm()
    
