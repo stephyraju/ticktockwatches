@@ -13,25 +13,27 @@ padding-bottom: 80px;
 
 }
 /* search box */
-#search-form input {
+
+ .search-form input {
     border: solid 1px;
-    border-radius: 10px;
+    border-radius: 0px;
     width: 180px;
     padding: 1px 15px;
+    margin-top: 10px;
     margin-left: 10px;
   }
-
-  #search-form {
-    display: inline;
-  }
-  #search-form input {
+  .search-form input {
     outline: none;
   }
-  #search-form button {
+  .search-icon {
+    color: rgb(0, 128, 129);
+    outline: none;
+  }
+  /* #search-form button {
     background-color: transparent;
     border: none;
     font-size: 20px;
-  }
+  } */
 /* Footer */
 #footer {
     background-color: #262626;
@@ -373,3 +375,29 @@ footer ul {
 #rolex-img {
     background-image: url('/static/img/fossil.jpg')
 }     */
+
+.basket{
+  position: relative;
+  top: -25px;
+  right: -20px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  background: #fff;
+  border: 1px solid #008081;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  display: block;
+  text-align: center;
+  color: #333;
+}
+
+
+/* search */
+.search-btn {
+  background-color: transparent;
+  border: none;
+  margin-left: 15px;
+  padding-top: 6px;
+  font-size: large;
+}
