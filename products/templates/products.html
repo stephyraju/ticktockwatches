@@ -50,9 +50,21 @@
 
 <section class="products-showcase">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="card-deck">
-     
+        {% if not products %} 
+                <div class="col-12 no-product">
+                   <h5>Sorry, but we couldn't find anything to match your search.</h5>
+                   <p>Please note that this does not necessarily mean that we do not have the product(s) you are looking for.</p>
+                   <ul class="pl-0"><strong>We suggest:</strong></ul>
+                    <li>Double check the spelling and try again.</li>
+                    <li>Try using a less specific search term.</li>
+                    <li>If you cannot find in search, please use the button below to browse all watches </li>
+                    <div class="col-12 p-0 text-center">
+                        <a href="{% url 'all_products2' %}" class="btn btn-cta btn-dark my-5">All Watches</a>
+                    </div>
+                </div>
+             {% else %}
              {% for product in products %}
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
                     <div class="card" style="width: 18rem;">
@@ -64,8 +76,10 @@
                                 <!-- check if the product is already a favourite -->
                                 {% if product in favourites %}
                                     <span class="favorited text-right"><i class="fa fa-heart"></i></span>
+                                    TEST-01
                                 {% else %}
                                     <span class="favorite text-right"><i class="fa fa-heart"></i></span>
+                                    TEST-02
                                 {% endif %}
                             </button>
                         </form>
@@ -88,7 +102,8 @@
                      </form>
                     </div>
                  </div>
-                {% endfor %} 
+                {% endfor %}
+            {% endif %} 
             </div> 
         </div>
     </div>    
