@@ -215,12 +215,15 @@ footer ul {
   .dropdown-content a:hover {
       background-color: #ddd;
     }
-
   .dropdown:hover .dropdown-content {
       display: block;
     }
+  .btn-hover {
+    font-weight: 500;
+    font-size: 1.1em;
+  }
   .btn-hover:hover {
-      color: grey;
+      color: grey;  
   }
   
 /* .product-title img{
