@@ -221,9 +221,10 @@ footer ul {
   .btn-hover {
     font-weight: 500;
     font-size: 1.1em;
+    color: grey;
   }
   .btn-hover:hover {
-      color: grey;  
+      color: black;  
   }
   
 /* .product-title img{
