@@ -61,7 +61,7 @@
 
           <li class="nav-item">
             <a class="nav-link" href="{% url 'view_cart' %}">
-                <i class="fas fa-shopping-cart" style="color:rgb(0, 128, 129);"></i> 
+                <i class="fas fa-shopping-cart icons"></i> 
                 {% if product_count > 0 %}
                 <span class="basket">{{ product_count }}</span>
                 {% endif %}
@@ -70,22 +70,23 @@
 
         <li class="nav-item active">
           <button onclick="myFunction()" type="submit" class="search-btn">
-            <i class="fa fa-search search-icon"></i>
+            <i class="fa fa-search search-icon icons"></i>
           </button>
           <div id="searchDiv" style="display: none;">
             <form method="GET" class="search-form" id="form" action=" {% url 'search' %}">
               <input type="text" name="q" placeholder="Search">
             </form> 
           </div>
-           
-          <!-- <form method="GET" id="search-form" action=" {% url 'search' %}">
-            <input type="text" name="q">
-            <button type="submit"><i class="fa fa-search" style="color:rgb(0, 128, 129);"></i></button> 
-        </form> -->
-        </li>   
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">
+              <i class="fas fa-envelope icons"></i>
+          </a>
+       </li>   
     </ul>
   </div>
 </nav>
+
 {% if messages %}
     <div class="msg alert alert-success">
         <div class="messages w-50%">
