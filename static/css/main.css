@@ -34,7 +34,9 @@ padding-bottom: 80px;
     border: none;
     font-size: 20px;
   } */
+
 /* Footer */
+
 #footer {
     background-color: #262626;
     color: white;
@@ -95,6 +97,18 @@ footer ul {
     text-transform: uppercase;
     font-size: 0.7rem;
 }
+
+@media screen and (max-width: 767px){
+  .footer-img img{
+      padding-bottom: 30px;
+      margin-left: 25px;
+  }
+  .service-links {
+    padding: 20px;
+    text-align: center;
+  }
+  }
+  
 /* validation error messages */
 
 .error-msg,.error{
@@ -191,6 +205,7 @@ footer ul {
     line-height: 1.2;
 }
 /*Product page*/
+
 .delivery-banner {
     background-color: #404040;
     height: 50px;
@@ -404,4 +419,11 @@ footer ul {
   margin-left: 15px;
   padding-top: 6px;
   font-size: large;
+}
+/* Contact Page */
+.contact-container {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
 }
