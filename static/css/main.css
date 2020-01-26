@@ -12,9 +12,27 @@ padding-top: 20px;
 padding-bottom: 80px;
 
 }
+/* Navbar */
+.icons {
+  color:rgb(0, 128, 129);
+  width: 20px;
+  height: 20px;
+  margin-right: 1.1rem;
+  z-index: 1;
+  cursor: pointer;
+}
 /* search box */
 
- .search-form input {
+.search-btn {
+  background-color: transparent;
+  border: none;
+  padding-top: 8px;
+  outline: none;
+}
+.search-btn:focus{
+  outline: 0;
+}
+.search-form input {
     border: solid 1px;
     border-radius: 0px;
     width: 180px;
@@ -22,18 +40,24 @@ padding-bottom: 80px;
     margin-top: 10px;
     margin-left: 10px;
   }
-  .search-form input {
+.search-form input {
     outline: none;
   }
-  .search-icon {
-    color: rgb(0, 128, 129);
-    outline: none;
+.basket{
+    position: relative;
+    top: -25px;
+    right: -20px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: #fff;
+    border: 1px solid #008081;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    display: block;
+    text-align: center;
+    color: #333;
   }
-  /* #search-form button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-  } */
 
 /* Footer */
 
@@ -80,7 +104,7 @@ footer ul {
 }
 .social-links a:hover {
     text-decoration: none;
-    color: #ff6600;
+    color:rgb(0, 128, 129);
 }
 .service-links {
     Padding-left : 20px;
@@ -395,31 +419,6 @@ footer ul {
     background-image: url('/static/img/fossil.jpg')
 }     */
 
-.basket{
-  position: relative;
-  top: -25px;
-  right: -20px;
-  font-size: 0.6rem;
-  font-weight: 700;
-  background: #fff;
-  border: 1px solid #008081;
-  border-radius: 50%;
-  width: 17px;
-  height: 17px;
-  display: block;
-  text-align: center;
-  color: #333;
-}
-
-
-/* search */
-.search-btn {
-  background-color: transparent;
-  border: none;
-  margin-left: 15px;
-  padding-top: 6px;
-  font-size: large;
-}
 /* Contact Page */
 .contact-container {
   background-color: #f2f2f2;
