@@ -133,8 +133,17 @@ footer ul {
   }
   }
   
-/* validation error messages */
+/* Messages */
 
+.messages {
+  background-color: #e6e6e6;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 1.3em;
+  color: rgb(0, 128, 129);
+  position: relative;
+}
 .error-msg,.error{
     color: #ff6600;
   }
