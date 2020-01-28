@@ -75,7 +75,8 @@ def user_profile(request):
     Renders profile page for user with a form to update
     their information.
     '''
-    favourites = Favourites.objects.all()
+    favourites = Favourites.objects.filter(user=request.user)
+    # favourites = Favourites.objects.all()
     user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
