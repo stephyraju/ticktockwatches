@@ -15,7 +15,30 @@ If the Product is not in favourite then save it as favourite
 @login_required
 def add_remove_favourites(request, id):
 
-    # product = get_object_or_404(Product,pk=id)
+    product = get_object_or_404(Product, pk=id)
+    user_profile = User.objects.get(email=request.user.email)
+    favourites = Favourites.objects.filter(user=request.user)
+
+    # import pdb
+    # pdb.set_trace()
+
+    if favourites.filter(user=user_profile).exists():
+        Favourites.objects.filter(user=user_profile).delete()
+       
+    else:
+        Favourites.objects.create(user=user_profile, product=product)
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+    # favourites = Favourites.objects.filter(user=user_profile)
+    # new_favourite = Favourites(user=user_profile, product=product)
+    # favourites.add(new_favourite)
+
+     # favourites.remove(request.user)
+    #  return HttpResponseRedirect(product.get_absolute_url())
+    ###
+
+     # product = get_object_or_404(Product,pk=id)
     # if request.method == 'POST':
     #     user_profile = User.objects.get(email=request.user.email)
     #     fav_product = Product.objects.get(pk=id)
@@ -28,20 +51,4 @@ def add_remove_favourites(request, id):
     
     # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     
-    product = get_object_or_404(Product, id=id)
-    user_profile = User.objects.get(email=request.user.email)
-    favourites = Favourites.objects.filter(user=request.user)
-    # favourites = Favourites.objects.filter(user=user_profile)
-    # new_favourite = Favourites(user=user_profile, product=product)
-    # favourites.add(new_favourite)
-
-    if favourites.filter(user=user_profile).exists():
-        Favourites.objects.filter(user=user_profile).delete()
-        # favourites.remove(request.user)
-    else:
-        Favourites.objects.create(user=user_profile, product=product)
-
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-    #  return HttpResponseRedirect(product.get_absolute_url())
-     
     
