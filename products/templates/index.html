@@ -44,7 +44,9 @@
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto featured-card">
                     <div class="card" style="width: 18rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
-                             <img class="card-img"src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
+                             <img class="card-img"src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
+                            </a>
+                            <div class="overlay"></div>
                              {% if product.bestseller %}
                              <div class="product-label text-center">Bestseller</div>
                              {% endif %}
@@ -90,7 +92,7 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
           <div class="card mt-2 brand-card">
             <a href="{% url 'rolex' %}">
-            <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
+            <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
             <div class="card-body">
               <h5 class="card-title text-center pt-2">Rolex</h5>
