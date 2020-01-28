@@ -25,8 +25,9 @@ def all_products2(request):
         products = paginator.page(1)
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
+
     return render(request, "products.html", {"products": products,
-                                            'favourites':favourites})
+                                            'favourites':[favourite.product for favourite in favourites]})
     
 def view_menswatch(request):
     """View to display only Mens"""
