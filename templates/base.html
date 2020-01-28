@@ -88,14 +88,11 @@
 </nav>
 
 {% if messages %}
-    <div class="msg alert alert-success">
-        <div class="messages w-50%">
-            {% for message in messages %} 
-            <!-- <a href="#" class="del-msg">&times;</a> -->
-            {{ message }}
-             {% endfor %}
-        </div>
-    </div>
+      <div class="messages">
+        {% for message in messages %} 
+        {{ message }}
+          {% endfor %}
+      </div>
     {% endif %}
       {% block content %} {% endblock %}
 
