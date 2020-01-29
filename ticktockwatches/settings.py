@@ -17,6 +17,18 @@ import os
 
 import dj_database_url   
 
+try:
+    import env
+except ImportError:
+    pass
+
+ENVIRONMENT = os.environ.get('ENVIRONMENT')
+
+if ENVIRONMENT=='DEV':
+    development = True
+else:
+    development = False   
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -31,7 +43,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), 'ticktockwatches.herokuapp.com']
-# ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0']
 
 # Application definition
 
