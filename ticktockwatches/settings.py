@@ -42,8 +42,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), 'ticktockwatches.herokuapp.com']
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), 'ticktockwatches.herokuapp.com','0.0.0.0']
+# ALLOWED_HOSTS = ['0.0.0.0']
 
 # Application definition
 
