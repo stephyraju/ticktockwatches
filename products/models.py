@@ -13,7 +13,7 @@ class Product(models.Model):
     Tissot =  "Tissot"
     Michael_Kors = "Michael Kors"
     Lacoste =  "Lacoste"
-    Lotus =  "Lotus"
+    Lorus =  "Lorus"
     Citizen =  "Citizen"
     
     
@@ -30,7 +30,7 @@ class Product(models.Model):
         (Tissot, "Tissot"),
         (Michael_Kors, "Michael Kors"),
         (Lacoste, "Lacoste"),
-        (Lotus, "Lotus"),
+        (Lorus, "Lorus"),
         (Citizen, "Citizen"),
         
     ]
