@@ -144,7 +144,7 @@ def view_lacoste(request):
         products = paginator.page(paginator.num_pages)
     return render(request, "products.html", {"products": products})
 
-def view_lotus(request):
+def view_lorus(request):
     """View to display only Lotus"""
     products = Product.objects.all().filter(brand='Lotus')
     paginator = Paginator(products, 8)  # Show 8 products per page
