@@ -338,24 +338,24 @@ footer ul {
    outline: none;
  }
  
- .favorite {
+ /* .favorite {
    color: rgb(224, 222, 216);
- }
- .favorite .fa,
-.favorited .fa {
+ } */
+ .favorite 
+ .fas, .fal {
   font-size: 1.8em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
 
-.favorite .fa:hover {
+/* .favorite .fa:hover {
   color: rgb(240, 208, 204);
-}
+} */
 
-.favorited {
+/* .favorited {
   color: rgb(243, 79, 73);
-}
+} */
 .modal-container .shape {
   max-width: 250px;
   margin: 18px;
