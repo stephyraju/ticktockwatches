@@ -32,7 +32,6 @@ class OrderLineItem(models.Model):
     ordered.
     
     """
-
     order = models.ForeignKey(Order, null=False)
     product = models.ForeignKey(Product, null=False)
     quantity = models.IntegerField(blank=False)
