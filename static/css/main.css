@@ -341,8 +341,8 @@ footer ul {
  /* .favorite {
    color: rgb(224, 222, 216);
  } */
- .favorite 
- .fas , .far {
+ .favorite .fas, 
+ .favourited.far {
   font-size: 1.8em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
