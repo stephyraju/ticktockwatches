@@ -342,7 +342,7 @@ footer ul {
    color: rgb(224, 222, 216);
  } */
  .favorite 
- .fas, .fal {
+ .fas , .far {
   font-size: 1.8em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
