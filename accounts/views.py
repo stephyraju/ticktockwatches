@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from favourites.models import Favourites
+# from favourites.models import Favourites
 from django.http import HttpResponseRedirect
 from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 
@@ -75,7 +75,7 @@ def user_profile(request):
     Renders profile page for user with a form to update
     their information.
     '''
-    favourites = Favourites.objects.filter(user=request.user)
+    # favourites = Favourites.objects.filter(user=request.user)
     # favourites = Favourites.objects.all()
     user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
@@ -89,5 +89,6 @@ def user_profile(request):
 
     return render(request, 'profile.html', {'form':form,
                                             'user_profile':user_profile,
-                                            'favourites':favourites })
+                                            #  'favourites':favourites 
+                                            })
 
