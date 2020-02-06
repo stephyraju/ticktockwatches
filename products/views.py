@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from .models import Product
-# from favourites.models import Favourites
+from favourites.models import Favourites
 from django.http import HttpResponseRedirect
 from django.conf import settings
 from favourites.views import add_remove_favourites
@@ -14,7 +14,8 @@ from favourites.views import add_remove_favourites
 def all_products2(request):
 
     products = Product.objects.all()
-    # favourite = Product.objects.filter(user=request.user)
+    favourites = Favourites.objects.filter(user=request.user)
+    bestseller = Product.objects.filter(bestseller=True)
     # is_favourite = False
     paginator = Paginator(products, 8)  # Show 8 products per page
     
@@ -29,11 +30,18 @@ def all_products2(request):
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
 
-    return render(request, "products.html", {"products": products,
-                                            # "is_favourite" :is_favourite,
-                                            # "favourite":favourite,
-                                            # 'favourites':[favourite.product for favourite in favourites]
-                                            })
+    context = {
+        'products': products,
+        'bestseller': bestseller,
+        'favourites':[favourite.product for favourite in favourites]
+    }
+
+    return render(request, "products.html", context)
+                                            # {"products": products,
+    #                                         # "is_favourite" :is_favourite,
+    #                                         #  "favourite":favourite,
+    #                                        'favourites':[favourite.product for favourite in favourites]
+    #                                         })
     
 def view_menswatch(request):
     """View to display only Mens"""

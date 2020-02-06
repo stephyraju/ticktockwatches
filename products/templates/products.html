@@ -77,7 +77,7 @@
                             {% csrf_token %}
                             <button type="submit">
                                 <!-- check if the product is already a favourite -->
-                                {% if favourite.product in user.favourites %}
+                                {% if product in favourites %}
                                     <span class="favorite text-right"><i class="far fa-heart" style="color:rgb(0, 128, 129)"></i></span>
                                     TEST-01
                                 {% else %}
@@ -89,7 +89,10 @@
 
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img class ="card-img" src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" /></a>
-                         <div class="card-body product-details">
+                             {% if product.bestseller %}
+                             <div class="product-label text-center">Bestseller</div>
+                             {% endif %}
+                             <div class="card-body product-details">
                              <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
                          
                              <p class="product-price">€ {{ product.price }}</p>
