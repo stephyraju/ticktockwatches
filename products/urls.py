@@ -1,10 +1,10 @@
 from django.conf.urls import url, include
-from .views import view_featured, all_products2, product_detail, view_menswatch, view_ladieswatch, view_kidswatch, view_rolex, view_timex, view_tedbaker, view_tissot, view_michaelkores,view_lacoste, view_lorus, view_citizen
+from .views import view_index, all_products2, product_detail, view_menswatch, view_ladieswatch, view_kidswatch, view_rolex, view_timex, view_tedbaker, view_tissot, view_michaelkores,view_lacoste, view_lorus, view_citizen
 
 
 
 urlpatterns = [
-    url(r'^$', view_featured, name='index'),
+    url(r'^$', view_index, name='index'),
     url(r'^$', all_products2, name='all_products2'),
     url(r'^view_menswatch/$', view_menswatch, name='menswatch'),
     url(r'^view_ladieswatch/$', view_ladieswatch, name='ladieswatch'),

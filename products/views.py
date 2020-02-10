@@ -193,16 +193,19 @@ def product_detail(request, pk):
     product.save()
     return render(request, "product_detail.html", {'product': product})
 
-def view_featured(request):
+def view_index(request):
     """ Renders home page with 4 random featured products in featured listing section """
 
     # featured_products = Product.objects.filter(featured=True).order_by('-featured'[:4])
     # featured_products = Product.objects.filter(featured=True)
     featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
     bestseller = Product.objects.filter(bestseller=True)
+    topbrand_products = Product.objects.filter(topbrand=True).order_by('?')[:6]
     context = {
         'featured_products': featured_products,
         'bestseller': bestseller,
+        'topbrand_products':topbrand_products ,
         'category': 'All products'
     }
     return render(request, "index.html", context)
+

@@ -53,6 +53,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to="images", blank=True, null=True)
     featured = models.BooleanField(default=False)
     bestseller = models.BooleanField(default=False)
+    topbrand = models.BooleanField(default=False)
     # favourite = models.ManyToManyField(User, related_name='favourite', blank=True)
     def __str__(self):
         return self.title

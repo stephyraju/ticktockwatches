@@ -84,77 +84,31 @@
 <!--Top Brands-->
 <section class= "top-brands">
     <div class="container my-3">
-    <div class="row mx-auto my-auto p-5">
+      <div class="row mx-auto my-auto p-5">
         <div class="col-12 pb-5">
             <h3>Top Brands</h3>
         </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-          <div class="card mt-2 brand-card">
-            <a href="{% url 'rolex' %}">
-            <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap"></a>
+        {% for product in topbrand_products %}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">    
+          <div class="card mt-2 brand-card">    
+            <!-- <a href="{% url 'rolex' %}"> -->
+          <div>
+            <img class="card-img-top pt-2" src={{MEDIA_URL}}{{product.image}} alt={{product.title}}></a>
             <div class="overlay"></div>
+          </div>
             <div class="card-body">
-              <h5 class="card-title text-center pt-2">Rolex</h5>
-            </div>
-            </a>
+              <p class="card-title brand-title pt-2">{{ product.brand}}</p>
+            </div>      
+            </a>      
           </div>
         </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-            <div class="card mt-2">
-              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
-              <div class="overlay"></div>
-              <div class="card-body">
-                <h5 class="card-title text-center pt-2">Rolex</h5>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-            <div class="card mt-2">
-              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
-              <div class="overlay"></div>
-              <div class="card-body">
-                <h5 class="card-title text-center pt-2">Rolex</h5>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-            <div class="card mt-2">
-              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
-              <div class="overlay"></div>
-              <div class="card-body">
-                <h5 class="card-title text-center pt-2">Rolex</h5>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-            <div class="card mt-2">
-              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
-              <div class="overlay"></div>
-              <div class="card-body">
-                <h5 class="card-title text-center pt-2">Rolex</h5>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-            <div class="card mt-2">
-              <img class="card-img-top pt-2" src="{% static 'img/fossil.jpg' %}" alt="Card image cap">
-              <div class="overlay"></div>
-              <div class="card-body">
-                <h5 class="card-title text-center pt-2">Rolex</h5>
-              </div>
-            </div>
-        </div>
-
+        {% endfor %}   
     </div>
  </div>
+</div>
  <div class="text-center py-3">
     <a href="{% url 'all_products2' %}" class="btn btn-dark rounded-0 btn-sm btn-home-products " >Show all watches</a>
+</div>
 </div>
 </section>
 
