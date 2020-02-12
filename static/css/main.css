@@ -260,10 +260,7 @@ footer ul {
    text-decoration:none; 
    cursor:pointer;  
 }
-.brand-title {
-  text-align: center;
-  font-size: 1rem;
-}
+
 .product-label {
   position: absolute;
   top: 16px;

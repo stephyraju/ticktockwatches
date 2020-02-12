@@ -69,11 +69,11 @@
          </li> 
          <li class="nav-item">
           <a class="nav-link" href="{% url 'view_fav' %}">
-              <i class="far fa-heart icons"></i> 
-              {% if product_count > 0 %}
+              <i class="far fa-heart icons"></i>
+              <!-- {% if product_count > 0 %}
               <span class="basket">{{ product_count }}</span>
-              {% endif %}
-          </a>
+              {% endif %} -->
+           </a>
        </li> 
 
         <li class="nav-item active">
@@ -101,7 +101,7 @@
         {{ message }}
           {% endfor %}
       </div>
-    {% endif %}
+{% endif %}
       {% block content %} {% endblock %}
 
 <!--Footer-->
