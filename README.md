@@ -136,6 +136,7 @@ The search icon is visible from all the pages. When the user click on the icon, 
 Features available from all the pages
 
 **Navbar**
+
 In order to create the navbar I have used Bootstrap 4 and the navbar is available in all the pages.
 
 The nabar features The shop logo on the left , which is linked to the homepage, home page, Products and a dropdown for brands.
@@ -167,3 +168,168 @@ There is a store locator link is available on the footer
 The footer also linked to social media accounts.
 
 At the bootom of the footer has copyright information for ticktock watch shop.
+
+### Features Left to Implement
+
+### Technologies Used
+
+
+  * Visual Studio Code - The IDE used for developing this project.
+  * GitHub - Used to store and share all project code remotely.
+  * Balsamiq - To create the wireframes for this project.
+
+**Front-End Technologies**
+  * HTML5 - Used as the base for markup text.
+  * CSS3 -  Used to add styles to the HTML.
+  * jQuery 3.4.1 - Used as the primary JavaScript functionality.
+  * Stripe - Used to make secure payments.
+  * AWS S3 Bucket - Used to store images entered into the database.
+  * Travis - Used for continuous integration.
+  * Boto3 - To enable creation, configuration and management of AWS S3.
+  * Font Awsome - Used for icons in the website.
+  * Bootstrap4 - Used to align the elements in the website using the grid system. And also used to create the hamburger button, the modals, the buttons, the badges, the alerts and to style the forms.
+
+  **Back-End Technologies**
+
+  * Python 3.6.7 - Used as the back-end programming language.
+  * Django -  Used as my Python web framework.
+  * Heroku - for deployment
+  * PostgreSQL - Used as relational SQL database plugin via Heroku.
+  
+ ## Testing 
+
+
+ ### GitHub Repository
+
+1. Created a repository in GitHub called: “stephyraju/ticktockwatches” https://github.com/stephyraju/ticktockwatches.git
+
+2. Initialised git from the terminal using Git Bash:
+
+git init
+
+3. Created a .gitignore file and I have added the files and folders that won't need to push to GitHub (i.e. '*.sqlite3','env.py','.vscode/','.venv/', pycache, *.pyc)
+
+4. Added the files that I was working on to the Staging area by using:
+
+git add .
+
+5. Run the commit command with the first commit
+
+git commit -m “initial commit"
+
+6. Copied from GitHub the following path and I ran it in the Git Bash terminal in order to indicate where my remote repository is:
+
+ git remote add origin git@github.com:stephyraju/ticktockwatches.git
+ 
+ git push -u origin master
+
+7. I've run regular commits after every important update to the code, and I pushed the changes to GitHub.
+
+
+### Deployment
+
+#### How to run this project locally
+
+To run this project on your own IDE follow the instructions below:
+
+*  Ensure you have the following tools: - An IDE such as Microsoft Visual Studio Code(or any IDE)
+
+* In order to run this project locally on your own system, you will need the following installed  - PIP - Python 3 - Git
+
+* To allow you to access all functionality on the site locally, create free accounts with the following services: - Stripe - AWS and set up an S3 bucket 
+
+**Instructions**
+
+* Clone this GitHub repository by either clicking the green "Clone or download" button above in order to download the project as a zip-file (remember to unzip it first), or by entering the following command into the Git CLI terminal:
+git clone https://github.com/stephyraju/ticktockwatches
+
+* Open your preferred IDE, open a terminal session in the unzip folder or cd to the correct location.
+
+* Create a .env file with your own credentials.
+
+python -m .venv venv
+NOTE: The python part of this command and the ones in other steps below assumes you are working with a windows operating system. Your Python command may differ, such as python3 or py
+
+Activate the .venv with the command:
+.venv\Scripts\activate 
+Again this command may differ depending on your operating system, please check the Python Documentation on virtual environments for further instructions.
+
+* Install all required modules with the command
+
+ pip -r requirements.txt.
+* Set up the following environment variables within your IDE.
+
+
+        - SECRET_KEY
+
+        - ENVIRONMENT
+
+        - EMAIL_ADDRESS
+
+        - EMAIL_PASSWORD
+
+        - STRIPE_PUBLISHABLE
+
+        - STRIPE_SECRET
+
+        - DATABASE_URL
+
+        - AWS_ACCESS_KEY_ID
+
+        - AWS_SECRET_ACCESS_KEY
+* In the IDE terminal, use the following command to launch the Django project:
+python manage.py runserver.
+
+* The Django server should be running locally now on http://127.0.0.1:8000 (or similar). If it doesn't automatically open, you can copy/paste it into your browser of choice.
+* When you run the Django server for the first time, it should create a new SQLite3 database file: db.sqlite3.
+
+* Next, you'll need to make migrations to create the database schema:
+      * python manage.py makemigrations
+      * python manage.py migrate
+* Create your superuser to access the django admin panel and database with the following command, and then follow the steps to add your admin username and password:
+
+     * python manage.py createsuperuser
+     * Assign an admin username,email,and secure password.
+* Now you can run the program locally with the following command:
+
+    * python manage.py runserver
+
+* Note - If you are having issues viewing static files you may need to collect static with the below command.
+    * python3 manage.py collectstatic
+
+#### Heroku Deployment
+
+To deploy TickTock  to heroku, take the following steps:
+
+1. Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+
+2. Create a Procfile with the terminal command echo web: python app.py > Procfile.
+
+3. git add and git commit the new requirements and Procfile and then git push the project to GitHub.
+
+4. Sign up for a free Heroku account, Create a new app on the Heroku website by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
+
+5. From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub, and enable Automatic Deployment.
+
+6. In the Heroku Resources tab, navigate to the Add-Ons section and search for Heroku Postgres. Select the free Hobby level. This will allow you to have a remote database instead of using the local sqlite3 database, and can be found in the Settings tab. You'll need to update your .env file with your new database-url details.
+Confirm the linking of the heroku app to the correct GitHub repository.
+
+7. In the heroku dashboard for the application, click on settings tab and then click on the Reveal config vars button to configure environmental variables.
+
+Set the following config vars:
+
+Key	Value
+SECRET_KEY	<your_secret_key>
+STRIPE_PUBLISHABLE	<your_stripe_publishable>
+STRIPE_SECRET	<your_stripe_secret>
+DEFAULT_FROM_EMAIL	<your_from_email>
+SERVER_EMAIL	<your_server_email>
+EMAIL_HOST	<your_email_host>
+EMAIL_HOST_USER	<your_host_user>
+EMAIL_HOST_PASSWORD	<your_host_password>
+
+8. In the Heroku dashboard, click "Deploy".
+
+9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
+
+10. The site is now successfully deployed.
