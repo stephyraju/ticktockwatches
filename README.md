@@ -277,6 +277,7 @@ Again this command may differ depending on your operating system, please check t
         - AWS_ACCESS_KEY_ID
 
         - AWS_SECRET_ACCESS_KEY
+
 * In the IDE terminal, use the following command to launch the Django project:
 python manage.py runserver.
 
@@ -318,15 +319,16 @@ Confirm the linking of the heroku app to the correct GitHub repository.
 
 Set the following config vars:
 
-Key	Value
-SECRET_KEY	<your_secret_key>
-STRIPE_PUBLISHABLE	<your_stripe_publishable>
-STRIPE_SECRET	<your_stripe_secret>
-DEFAULT_FROM_EMAIL	<your_from_email>
-SERVER_EMAIL	<your_server_email>
-EMAIL_HOST	<your_email_host>
-EMAIL_HOST_USER	<your_host_user>
-EMAIL_HOST_PASSWORD	<your_host_password>
+          Key	     |     Value
+          SECRET_KEY	|<your_secret_key>
+          STRIPE_PUBLISHABLE|	<your_stripe_publishable>
+          STRIPE_SECRET	|<your_stripe_secret>
+          AWS_ACCESS_KEY_ID|<your_secret_key>
+          AWS_SECRET_ACCESS_KEY	|<your secret key>
+          AWS_STORAGE_BUCKET_NAME	|<your AWS S3 bucket name>
+          DATABASE_URL	|<your postgres database url>
+          EMAIL_ADDRESS|<your email address>
+          EMAIL_PASSWORD|<your password>
 
 8. In the Heroku dashboard, click "Deploy".
 
