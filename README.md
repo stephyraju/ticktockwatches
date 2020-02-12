@@ -320,6 +320,7 @@ Confirm the linking of the heroku app to the correct GitHub repository.
 Set the following config vars:
 
           |Key	                  |     Value                  |
+          |-----------------------| -----------------------:  |
           |SECRET_KEY	            |<your_secret_key>           |
           |STRIPE_PUBLISHABLE     |	<your_stripe_publishable>  |
           |STRIPE_SECRET	        | <your_stripe_secret>       |
