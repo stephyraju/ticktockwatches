@@ -14,7 +14,7 @@ from favourites.views import add_remove_favourites
 def all_products2(request):
 
     products = Product.objects.all()
-    favourites = Favourites.objects.filter(user=request.user)
+    # favourites = Favourites.objects.filter(user=request.user)
     bestseller = Product.objects.filter(bestseller=True)
     # is_favourite = False
     paginator = Paginator(products, 8)  # Show 8 products per page
@@ -33,7 +33,7 @@ def all_products2(request):
     context = {
         'products': products,
         'bestseller': bestseller,
-        'favourites':[favourite.product for favourite in favourites]
+        # 'favourites':[favourite.product for favourite in favourites]
     }
 
     return render(request, "products.html", context)

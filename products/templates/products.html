@@ -77,7 +77,7 @@
                             {% csrf_token %}
                             <button type="submit">
                                 <!-- check if the product is already a favourite -->
-                                {% if product in favourites %}
+                                {% if product.favourite in user.favourites.all %}
                                     <span class="favorite text-right"><i class="far fa-heart" style="color:rgb(0, 128, 129)"></i></span>
                                     TEST-01
                                 {% else %}

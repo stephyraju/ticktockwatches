@@ -54,7 +54,7 @@ class Product(models.Model):
     featured = models.BooleanField(default=False)
     bestseller = models.BooleanField(default=False)
     topbrand = models.BooleanField(default=False)
-    # favourite = models.ManyToManyField(User, related_name='favourite', blank=True)
+    favourite = models.ManyToManyField(User, related_name='favourite', blank=True)
     def __str__(self):
         return self.title
 
