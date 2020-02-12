@@ -342,7 +342,9 @@ Set the following config vars:
 ### Credits
 
 #### Acknoledgement
+
 Special thanks to Guido Cecilio Garcia, my Code Institute mentor, for his guidance and advice whilst working on this project.
 
 **Disclaimer**
-The content of this website is educational purposes only.
+
+ The content of this website is educational purposes only.
