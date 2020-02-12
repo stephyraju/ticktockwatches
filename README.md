@@ -319,16 +319,16 @@ Confirm the linking of the heroku app to the correct GitHub repository.
 
 Set the following config vars:
 
-          Key	     |     Value
-          SECRET_KEY	|<your_secret_key>
-          STRIPE_PUBLISHABLE|	<your_stripe_publishable>
-          STRIPE_SECRET	|<your_stripe_secret>
-          AWS_ACCESS_KEY_ID|<your_secret_key>
-          AWS_SECRET_ACCESS_KEY	|<your secret key>
-          AWS_STORAGE_BUCKET_NAME	|<your AWS S3 bucket name>
-          DATABASE_URL	|<your postgres database url>
-          EMAIL_ADDRESS|<your email address>
-          EMAIL_PASSWORD|<your password>
+          |Key	     |     Value |
+          |SECRET_KEY	|<your_secret_key>|
+          |STRIPE_PUBLISHABLE|	<your_stripe_publishable>|
+          |STRIPE_SECRET	|<your_stripe_secret>|
+          |AWS_ACCESS_KEY_ID|<your_secret_key>|
+          |AWS_SECRET_ACCESS_KEY	|<your secret key>|
+          |AWS_STORAGE_BUCKET_NAME	|<your AWS S3 bucket name>|
+          |DATABASE_URL	|<your postgres database url>|
+          |EMAIL_ADDRESS|<your email address>|
+          |EMAIL_PASSWORD|<your password>|
 
 8. In the Heroku dashboard, click "Deploy".
 
