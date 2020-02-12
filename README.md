@@ -319,7 +319,7 @@ Confirm the linking of the heroku app to the correct GitHub repository.
 
 Set the following config vars:
 
-| Key	                    |    Value                     |
+| Key	                    |     Value                    |
 | ---------------------   | ---------------------------- |
 | SECRET_KEY	            | <your secret key>            |
 | STRIPE_PUBLISHABLE      |	<your stripe publishable>    |
@@ -328,17 +328,11 @@ Set the following config vars:
 | AWS_SECRET_ACCESS_KEY   | <your secret key>            |
 | AWS_STORAGE_BUCKET_NAME | <your AWS S3 bucket name>    |
 | DATABASE_URL	          | <your postgres database url> |
-| EMAIL_ADDRESS           | <your email address>         |
-| EMAIL_PASSWORD          | <your password>              | 
+| EMAIL_ADDRESS           | <your email address>         | 
+| EMAIL_PASSWORD          | <your password>              |
 
 8. In the Heroku dashboard, click "Deploy".
 
 9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
 
 10. The site is now successfully deployed.
-
-
-### Credits
-
-
-#### Acknowledgements
