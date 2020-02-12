@@ -14,31 +14,29 @@
     </div>
     <div class="row justify-content-center">
           <heading class="col-11 col-md-10 text-center mt-5">
-            {% if total == 0 %}
+            {% if favourite == 0 %}
             <h1>You don't have any favourites!</h1>
             <a href="{% url 'all_products2' %}" class="btn btn-dark my-5"> Continue Shopping</a>
             {% else %}
-            <h1 class="pb-5">Your shopping cart</h1>
+            <h1 class="pb-5">Your Favourite Watches</h1>
             {% endif %}
           </heading>  
     </div>
     <!-- contents of shopping cart -->
-    {% if total != 0 %}
+  {% if favourites %}
     <div class= "container cart-container">
         <div class="row justify-content-center">
-            {% for item in cart_items %}
+            {% for favourite in favourites %}
             <div class= "col-4 mb-5">
-                <img class="mx-auto text-center" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="Product-image" height="100" width="100"></img>
+                <img class="mx-auto text-center"src="{{MEDIA_URL}}{{favourite.product.image}}" alt="Product-image" height="100" width="100"></img>
             </div>
             <div class="col-8 mb-5">
                 <div class="row">
                     <div class="col-10">
-                        <h4>{{ item.product.title }}</h4>
-                        <p class="product-description">{{ item.product.description }}</p>
-                        <p class="price">€{{ item.product.price }}</p>
+                        <h4>{{ favourite.title }}</h4>
                     </div>
                     <div class="col-10">
-                        <form class="form-inline" method="post" action="{% url 'add_remove_favourites' item.id %}">
+                        <form class="form-inline" method="post" action="{% url 'add_remove_favourites' product.id %}">
                             {% csrf_token %}
                             <div class="form-group">
                                 <div class="input-group">
@@ -52,11 +50,6 @@
             </div>
             {% endfor %}
         </div> 
-        <hr>
-        <div class="col-10 text-center">
-            <h5>Total: €  {{ total }}</h5>
-            <p>Tax included.</p>
-        </div>
         <div class="col-10 text-center">
             <a href="{% url 'checkout' %}" class="btn btn-dark" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
         </div>
@@ -65,5 +58,5 @@
         </div>
         {% endif %}
     </div>
-</div>
-{% endblock %}
+</div> 
+{% endblock %} 
