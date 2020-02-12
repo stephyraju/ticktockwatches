@@ -321,10 +321,10 @@ Set the following config vars:
 
 | Key	                    |     Value                    |
 | ---------------------   | -----------------------      |
-| SECRET_KEY	            | <your_secret_key>            |
-| STRIPE_PUBLISHABLE      |	<your_stripe_publishable>    |
-| STRIPE_SECRET	          | <your_stripe_secret>         |
-| AWS_ACCESS_KEY_ID       | <your_secret_key>            |
+| SECRET_KEY	            | <your secret key>            |
+| STRIPE_PUBLISHABLE      |	<your stripe publishable>    |
+| STRIPE_SECRET	          | <your stripe secret>         |
+| AWS_ACCESS_KEY_ID       | <your secret key>            |
 | AWS_SECRET_ACCESS_KEY   | <your secret key>            |
 | AWS_STORAGE_BUCKET_NAME | <your AWS S3 bucket name>    |
 | DATABASE_URL	          | <your postgres database url> |
@@ -336,3 +336,9 @@ Set the following config vars:
 9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
 
 10. The site is now successfully deployed.
+
+
+### Credits
+
+
+#### Acknowledgements
