@@ -77,7 +77,7 @@ def user_profile(request):
     '''
     # favourites = Favourites.objects.filter(user=request.user)
     # favourites = Favourites.objects.all()
-    user_profile = User.objects.get(email=request.user.email)
+    # user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
@@ -88,7 +88,7 @@ def user_profile(request):
         form = UserUpdateForm(instance=request.user)
 
     return render(request, 'profile.html', {'form':form,
-                                            'user_profile':user_profile,
+                                            # 'user_profile':user_profile,
                                             #  'favourites':favourites 
                                             })
 

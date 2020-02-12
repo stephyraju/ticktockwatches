@@ -5,7 +5,7 @@
 {% block content %}
 
 <!--Alert messages to the user -->
-<div class="container-fluid p-0">
+<!-- <div class="container-fluid p-0">
     <div class="row no-gutters">
         <div class="col-12">
             {% if messages %}
@@ -17,13 +17,13 @@
             {% endif %}
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="container log-form">
     <div class="row mx-auto w-50 justify-content-center">
         
         <div class="col-sm-12 text-center">
-            <h2>Hello {{user_profile.username}}!</h2>
+            <h2>Hi <span class="text-capitalize">{{user}}</span>!</h2>
             <p>You can update your Profile</p>
         </div>
             <!-- User can update profile info here -->
@@ -48,7 +48,7 @@
         </div>
     </div> -->
     <!-- Modal Favourites-->
-<!-- <div class="modal fade" id="modalProductsFavourites" tabindex="-1" role="dialog" aria-labelledby="ModalTitle2" aria-hidden="true">
+ <!-- <div class="modal fade" id="modalProductsFavourites" tabindex="-1" role="dialog" aria-labelledby="ModalTitle2" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -80,5 +80,5 @@
             </div>
         </div>
     </div>
-</div> -->
+</div> --> 
 {% endblock %}
