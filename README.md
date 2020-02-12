@@ -298,9 +298,10 @@ python manage.py runserver.
 * Note - If you are having issues viewing static files you may need to collect static with the below command.
     * python3 manage.py collectstatic
 
-#### Heroku Deployment
 
-To deploy TickTock  to heroku, take the following steps:
+#### Heroku Deployment
+
+    To deploy TickTock  to heroku, take the following steps:
 
 1. Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
 
@@ -336,3 +337,12 @@ Set the following config vars:
 9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
 
 10. The site is now successfully deployed.
+
+
+### Credits
+
+#### Acknoledgement
+Special thanks to Guido Cecilio Garcia, my Code Institute mentor, for his guidance and advice whilst working on this project.
+
+**Disclaimer**
+The content of this website is educational purposes only.
