@@ -26,7 +26,7 @@
   {% if favourites %}
     <div class= "container cart-container">
         <div class="row justify-content-center">
-            {% for favourite in favourites %}
+            {% for product in favourite_products %}
             <div class= "col-4 mb-5">
                 <img class="mx-auto text-center"src="{{MEDIA_URL}}{{favourite.product.image}}" alt="Product-image" height="100" width="100"></img>
             </div>

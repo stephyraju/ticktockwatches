@@ -19,6 +19,15 @@ def view_fav(request):
 
 @login_required
 def add_remove_favourites(request, id):
+    
+    # Youtube
+    product = get_object_or_404(Product,pk=id)
+    if product.favourite.filter(id=request.user.id).exists():
+        product.favourite.remove(request.user)
+    else:
+        product.favourite.add(request.user)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
     #working
     # product = get_object_or_404(Product, pk=id)
     # user_profile = User.objects.get(email=request.user.email)
@@ -35,14 +44,7 @@ def add_remove_favourites(request, id):
 
     # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-    # Youtube
-    product = get_object_or_404(Product,pk=id)
-    if product.favourite.filter(id=request.user.id).exists():
-        product.favourite.remove(request.user)
-    else:
-        product.favourite.add(request.user)
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
+    
 
     #  product = get_object_or_404(Product,pk=id)
     # if request.method == 'POST':
