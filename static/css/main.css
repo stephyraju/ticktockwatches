@@ -323,6 +323,14 @@ footer ul {
     text-decoration: none;
     color: black;
 }
+/*Pagination */
+
+.pagination {
+  color : rgb(0, 128, 129);
+}
+.pagination-space {
+  padding-right: 15px;
+}
 /*Cart page */
 
  @media (min-width: 1200px) { 
