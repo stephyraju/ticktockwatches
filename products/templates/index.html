@@ -34,15 +34,14 @@
 <!--Product-showcase featured watches-->
 <section class="products-showcase">
     <div class="container featured-products">
-        <div class="row">
-           <div class="col-12 ml-5 pb-5">
-                <h3>Shop our featured watches</h3>
+        <div class="row mx-auto">
+           <div class="col-12 pb-5">
+                <h3>Shop Our Featured Watches</h3>
             </div>
              <div class="card-deck"> 
-     
                 {% for product in featured_products %}
                  <div class="col-xs-12 col-md-4 col-lg-3 mx-auto featured-card">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 17rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img class="card-img"src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
                             </a>
@@ -75,9 +74,9 @@
 <section>
  <div class="jumbotron jumbotron-fluid shop-promo">
     <div class="container text-center">
-      <h3 class="display-4">Tick Tock</h3>
-      <p class="lead"><strong>Watch Shop<br> Ireland's Largest Independent Online Watch Shop</strong></p>
-      <p>Welcome to Watch Shop - home to a wide range of high quality watches from leading designer brands including Casio, Citizen, Rotary, Emporio Armani and Olivia Burton. We are official stockists for all our partner brands. Why risk buying anywhere else?</p>
+      <h3 class="display-4">TickTock</h3>
+      <p class="lead"><strong>Ireland's Largest Online Watch Shop</strong></p>
+      <p>Welcome to TickTock - We are proud to stock a wide selection of watches for him and for her, from sought-after brands such as Casio, HUGO BOSS, Citizen and many more at our TickTock watch shop. Watches make perfect presents for friends, for family, for you and for love.</p>
     </div>
   </div>
 </section>
@@ -92,10 +91,8 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">    
           <div class="card mt-2 brand-card">    
             <!-- <a href="{% url 'rolex' %}"> -->
-          <div>
             <img class="card-img-top pt-2" src={{MEDIA_URL}}{{product.image}} alt={{product.title}}></a>
             <div class="overlay"></div>
-          </div>
             <div class="card-body">
               <h5 class="card-title text-center pt-2">{{ product.brand}}</h5>
             </div>      
