@@ -325,7 +325,7 @@ footer ul {
 }
 /*Pagination */
 
-.pagination {
+.pagination a {
   color : rgb(0, 128, 129);
 }
 .pagination-space {
