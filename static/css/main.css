@@ -331,6 +331,10 @@ footer ul {
 .pagination-space {
   padding-right: 15px;
 }
+.step-links a {
+  color:rgb(0, 128, 129);
+  text-decoration: none;
+}
 /*Cart page */
 
  @media (min-width: 1200px) { 
