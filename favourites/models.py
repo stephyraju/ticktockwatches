@@ -16,7 +16,7 @@ class Favourites(models.Model):
     product =  models.ForeignKey(Product, null=False)
 
     def __str__(self):
-        return self.favourites
+        return self.id
 
     class Meta:
         ordering = ['-id']
