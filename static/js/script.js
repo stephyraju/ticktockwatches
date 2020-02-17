@@ -1,8 +1,9 @@
+// messages timeout
 $(document).ready(function() {
-    // messages timeout for 10 sec 
+    // messages timeout for 3 sec 
     setTimeout(function() {
         $('.messages').fadeOut('slow');
-    }, 4000);
+    }, 3000);
 });
 
 // Search icon display
