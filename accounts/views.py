@@ -16,7 +16,7 @@ from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
 def logout(request):
     '''Log out the user / request contains the user object'''
     auth.logout(request)
-    messages.success(request,'You have been succesfully loged out')
+    messages.success(request,'You have been succesfully logged out')
     return redirect (reverse('index'))
 
 def login(request):
