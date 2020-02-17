@@ -444,7 +444,7 @@ footer ul {
 
 /* Contact Page */
 .contact-container {
-  background-color: #f2f2f2;
+  border: thistle;
   border-radius: 6px;
   padding: 1rem;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
