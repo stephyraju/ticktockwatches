@@ -87,20 +87,73 @@
         <div class="col-12 pb-5">
             <h3>Top Brands</h3>
         </div>
-        {% for product in topbrand_products %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">    
           <div class="card mt-2 brand-card">    
-            <!-- <a href="{% url 'rolex' %}"> -->
-            <img class="card-img-top pt-2" src={{MEDIA_URL}}{{product.image}} alt={{product.title}}></a>
+            <a href="{% url 'tissot' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/tissot.jpg' %}" alt={{product.title}}></a>
             <div class="overlay"></div>
             <div class="card-body">
-              <h5 class="card-title text-center pt-2">{{ product.brand}}</h5>
+              <h5 class="card-title text-center pt-2">Tissot</h5>
             </div>      
-            </a>      
           </div>
         </div>
-        {% endfor %}   
+       
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card mt-2">
+            <a href="{% url 'citizen' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/citiw.jpg' %}" alt="Card image cap"></a>
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Citizen</h5>
+            </div>
+          </div>
+       </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card mt-2">
+            <a href="{% url 'lacoste' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/lacoste.jpg' %}" alt="Card image cap"></a>
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Lacoste</h5>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
+          <div class="card mt-2">
+            <a href="{% url 'rolex' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/rolex.png' %}" alt="Card image cap"></a>
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Rolex</h5>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
+          <div class="card mt-2">
+            <a href="{% url 'lorus' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/lorus.jpg' %}" alt="Card image cap"></a>
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Lorus</h5>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card mt-2">
+            <a href="{% url 'tedbaker' %}">
+            <img class="card-img-top pt-2" src="{% static 'img/tedM.jpg' %}" alt="Card image cap"></a>
+            <div class="overlay"></div>
+            <div class="card-body">
+              <h5 class="card-title text-center pt-2">Ted Baker</h5>
+            </div>
+          </div>
+      </div>
     </div>
+
  </div>
 </div>
  <div class="text-center py-3">
@@ -108,6 +161,4 @@
 </div>
 </div>
 </section>
-
-
 {% endblock %}
