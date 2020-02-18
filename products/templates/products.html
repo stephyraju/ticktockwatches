@@ -2,6 +2,8 @@
 
 {% load staticfiles %}
 
+{% load is_user_in_fav %}
+
 {% block title %}Home{% endblock %}
 
 {% block content %}
@@ -77,7 +79,7 @@
                             {% csrf_token %}
                             <button type="submit">
                                 <!-- check if the product is already a favourite -->
-                                {% if product.favourite in user.favourites.all %}
+                                {% if user|is_user_in_fav:product.favourite %}
                                     <span class="favorite text-right"><i class="far fa-heart" style="color:rgb(0, 128, 129)"></i></span>
                                     TEST-01
                                 {% else %}
