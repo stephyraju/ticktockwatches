@@ -5,41 +5,36 @@
 ## Table Of Contents
 
 **1.[UX](#ux)**
-  ** User Stories
-  ** Design
-        ** Framework
-        ** Color Scheme
-        ** Icons
-        ** Typography
-  **Wireframes
-**2.Features**
+  * [User Stories](#user-stories)
+  * [Design](#design)
+    * [Framework](#framework)
+    * [Color Scheme](#color-scheme)
+    * [Icons](#icons)
+    * [Typography](#typography)
+  * [Wireframes](#wireframes)
 
-    ** Existing Features
-    ** Features Left to Implement
+**2.[Features](#features)**
 
-**3.Technologies Used**
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
 
-    ** Front-End Technologies
-    ** Back-End Technologies
+**3.[Technologies Used](#technologies-used)**
 
-**4.Testing**
+  * [Front-End Technologies](#front-end-technologies)
+  * [Back-End Technologies](#back-end-technologies)
 
-    ** Validators
-    ** Compatibility
-    ** Known Issues
-    ** Automated Testing
+**4.[Testing](#testing)**
 
-**5.Deployment**
+  
 
-    ** Local Deployment
-    ** Remote Deployment
+**5.[Deployment](#deployment)**
 
-**6.Credits**
+  * [Local Deployment](#how-to-run-this-project-locally)
+  * [Heroku Deployment](#heroku-deployment)
 
-    ** Content
-    ** Media
-    ** Code
-    ** Acknowledgements
+**6.[Credits](#credits)**
+
+-----------------------------
 
 ### UX
 
@@ -62,7 +57,7 @@ This project is part of my Code Institute Full Stack Software Development studie
 ### Design
 
 
-##### Framework
+#### Framework
 
   * Bootstrap 4
   * jQuery 3.4.1
