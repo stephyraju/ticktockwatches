@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^accounts/', include(urls_accounts)),
     url(r'^home/', include(home_urls)),
     url(r'^products/', include(urls_products)),
-    url(r"^products_list/$", all_products2, name="all_products2"),
+    url(r'^products_list/$', all_products2, name="all_products2"),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^favourites/', include(urls_favourites)),
