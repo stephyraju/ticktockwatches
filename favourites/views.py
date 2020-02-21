@@ -15,21 +15,32 @@ If the Product is not in favourite then save it as favourite
 @login_required
 def view_fav(request):
     """A View that renders the cart contents page"""
-    return render(request, "favourite.html")
+    print("==============")
+    print(request.user)
+    print(Favourites.objects.all())
+    favourite_products = Favourites.objects.filter(user=request.user)
+    print(favourite_products)
+    return render(request, 'favourite.html', {"favourite_products": favourite_products })
+     
+    # return render(request, "favourite.html")
 
 @login_required
 def add_remove_favourites(request, id):
     
     # Youtube
     product = get_object_or_404(Product,pk=id)
+    # import pdb
+    # pdb.set_trace()
+    print('userId: {0}, in fav {1}'.format(request.user.id, product.favourite.filter(id=request.user.id).exists()))
     if product.favourite.filter(id=request.user.id).exists():
         product.favourite.remove(request.user)
     else:
         product.favourite.add(request.user)
+    product.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
     #working
-    # product = get_object_or_404(Product, pk=id)
+    # product = get_object_or_404(Product, pk=id)c
     # user_profile = User.objects.get(email=request.user.email)
     # favourites = Favourites.objects.filter(user=request.user)
 
@@ -58,19 +69,12 @@ def add_remove_favourites(request, id):
 
     
     # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-    
-def favourite_list(request):
-    #    favourites = Favourites.objects.filter(user=request.user)
-       user = request.user
-       favourite_products = user.favourite.all()
-       
-       return render(request, 'favourite.html', {"favourite_products": favourite_products,
-                                                # 'favourites':favourites 
-                                                })
 
-
-
-    
-
-    
+# def favourite_list(request):  
+#     # import pdb;
+#     # pdb.set_trace()
+#     print("==============")
+#     favourite_products = Favourites.objects.filter(user=request.user)
+#     print(favourite_products)
+#     return render(request, 'favourite.html', {"favourite_products": favourite_products })
      

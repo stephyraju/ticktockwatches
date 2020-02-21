@@ -15,8 +15,10 @@ class Favourites(models.Model):
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     product =  models.ForeignKey(Product, null=False)
 
-    def __str__(self):
-        return self.id
+    # def __str__(self):
+    #     return self.id
+    def __unicode__(self):
+        return self.user
 
     class Meta:
         ordering = ['-id']
