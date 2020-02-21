@@ -59,25 +59,36 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 #### Framework
 
-  * Bootstrap 4
-  * jQuery 3.4.1
+  * [Bootstrap 4](https://getbootstrap.com/)
+  * [jQuery 3.4.1](https://code.jquery.com/jquery/)
     * In an effort to keep the JavaScript minimal, I have decided to use jQuery as foundation to my scripts framework.
-  * Django 1.11
+  * [Django 1.11](https://www.djangoproject.com/)
     * Django is a free and open-source web framework that I've used to render the back-end Python with the front-end Bootstrap. We were taught how to use Django 1.11 in the lessons, despite Django 2.0 being the current version,I used Django 1.11
 
 #### Color Scheme
 
+    For the color scheme, I've used gray and black in the navbar and most pages. I chose teal and thistle for some icons and headings to highlight. Overall, I tried to keep a simple classic look.
 
 #### Icons
 
-* Font Awsome 5.11.2
+* [Font Awsome 5.11.2](https://fontawesome.com/)
 
     I prefer to use Font Awesome icons for this project, as they have significantly more icons to use. 
 
 #### Typography
 
+    The following fonts were used :
+
+      * [Bree](https://fonts.google.com/specimen/Bree+Serif)
+      * [sans-serif](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)
+
 #### Wireframes
 
+Mock-ups were created early on in this project.
+
+I've used [Balsamiq](https://balsamiq.com/) Wireframes during the Scope Plane part of the design and planning process for this project.
+
+All of my wireframes for this project can be found here
 
 ### Features
 
@@ -108,22 +119,27 @@ In this page user can filter the products by gender.
 
 
 **Product detail.html**
+
 On this page the user can see all the details about the product. The product title, Price and the product features.
 If the user want to add the product to the cart they can do from here as well.
 
 #### Home app
 
  **About.html**
+
   This page explains about the shop and  how it works 
 
 **Contact.html**
+
  In the navbar and footer, there is a link for the customer to contact the shop. The user can fill out the form to send an email to reach the shop.
  When the user clicks "send" the email is processed and sent via emailjs to Owner’s email address and user has been notified via message.
 
- **delivery.html**
+**delivery.html**
+
 In the footer, there is a link for the customer to reach this page. In this page, all the delivery policies are explained including delivery charges for different countries.
 
 **Faqs.html**
+
  The FAQs page has some common questions and answers, so the user can easily find the relevent one.
 
  The user can go to the contact page from the button at the end of the page if they have further questions.
@@ -205,20 +221,20 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 ### Technologies Used
 
 
-  * Visual Studio Code - The IDE used for developing this project.
-  * GitHub - Used to store and share all project code remotely.
-  * Balsamiq - To create the wireframes for this project.
+  * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used for developing this project.
+  * [GitHub](https://github.com/) - Used to store and share all project code remotely.
+  * [Balsamiq]((https://balsamiq.com/) - To create the wireframes for this project.
 
 **Front-End Technologies**
-  * HTML5 - Used as the base for markup text.
-  * CSS3 -  Used to add styles to the HTML.
-  * jQuery 3.4.1 - Used as the primary JavaScript functionality.
-  * Stripe - Used to make secure payments.
-  * AWS S3 Bucket - Used to store images entered into the database.
-  * Travis - Used for continuous integration.
-  * Boto3 - To enable creation, configuration and management of AWS S3.
-  * Font Awsome - Used for icons in the website.
-  * Bootstrap4 - Used to align the elements in the website using the grid system. And also used to create the hamburger button, the modals, the buttons, the badges, the alerts and to style the forms.
+  * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+  * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3) -  Used to add styles to the HTML.
+  * [jQuery 3.4.1](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
+  * [Stripe](https://stripe.com/docs/api) - Used to make secure payments.
+  * [AWS S3 Bucket](https://aws.amazon.com/) - Used to store images entered into the database.
+  * [Travis](https://travis-ci.org/) - Used for continuous integration.
+  * [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - To enable creation, configuration and management of AWS S3.
+  * [Font Awsome](https://www.bootstrapcdn.com/fontawesome/) - Used for icons in the website.
+  * [Bootstrap4](https://www.bootstrapcdn.com/) - Used to align the elements in the website using the grid system. And also used to create the hamburger button, the modals, the buttons, the badges, the alerts and to style the forms.
 
   **Back-End Technologies**
 
