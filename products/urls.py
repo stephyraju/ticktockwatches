@@ -5,7 +5,7 @@ from .views import view_index, all_products2, product_detail, view_menswatch, vi
 
 urlpatterns = [
     url(r'^$', view_index, name='index'),
-    url(r'^$', all_products2, name='all_products2'),
+    url(r'^products_list/$', all_products2, name='all_products2'),
     url(r'^view_menswatch/$', view_menswatch, name='menswatch'),
     url(r'^view_ladieswatch/$', view_ladieswatch, name='ladieswatch'),
     url(r'^view_kidswatch/$', view_kidswatch, name='kidswatch'),
