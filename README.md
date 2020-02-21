@@ -1,9 +1,45 @@
 [![Build Status](https://travis-ci.com/stephyraju/ticktockwatches.svg?branch=master)](https://travis-ci.com/stephyraju/ticktockwatches)
 
-## TickTockWatches 
-#### Full Stack Framework Milestone 
+## TickTockWatches   - Full Stack Framework Milestone 
 
 ## Table Of Contents
+
+**1.[UX](#ux)**
+  ** User Stories
+  ** Design
+        ** Framework
+        ** Color Scheme
+        ** Icons
+        ** Typography
+  **Wireframes
+**2.Features**
+
+    ** Existing Features
+    ** Features Left to Implement
+
+**3.Technologies Used**
+
+    ** Front-End Technologies
+    ** Back-End Technologies
+
+**4.Testing**
+
+    ** Validators
+    ** Compatibility
+    ** Known Issues
+    ** Automated Testing
+
+**5.Deployment**
+
+    ** Local Deployment
+    ** Remote Deployment
+
+**6.Credits**
+
+    ** Content
+    ** Media
+    ** Code
+    ** Acknowledgements
 
 ### UX
 
