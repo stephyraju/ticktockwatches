@@ -37,11 +37,6 @@ def all_products2(request):
     }
 
     return render(request, "products.html", context)
-                                            # {"products": products,
-    #                                         # "is_favourite" :is_favourite,
-    #                                         #  "favourite":favourite,
-    #                                        'favourites':[favourite.product for favourite in favourites]
-    #                                         })
     
 def view_menswatch(request):
     """View to display only Mens"""
@@ -200,11 +195,11 @@ def view_index(request):
     # featured_products = Product.objects.filter(featured=True)
     featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
     bestseller = Product.objects.filter(bestseller=True)
-    topbrand_products = Product.objects.filter(topbrand=True).order_by('?')[:6]
+    # topbrand_products = Product.objects.filter(topbrand=True).order_by('?')[:6]
     context = {
         'featured_products': featured_products,
         'bestseller': bestseller,
-        'topbrand_products':topbrand_products ,
+        # 'topbrand_products':topbrand_products ,
         'category': 'All products'
     }
     return render(request, "index.html", context)
