@@ -25,14 +25,16 @@
 
 **4.[Testing](#testing)**
 
-  
 
-**5.[Deployment](#deployment)**
+
+**5.[Github Repository](#github-repository)**
+
+**6.[Deployment](#deployment)**
 
   * [Local Deployment](#how-to-run-this-project-locally)
   * [Heroku Deployment](#heroku-deployment)
 
-**6.[Credits](#credits)**
+**7.[Credits](#credits)**
 
 -----------------------------
 
@@ -67,7 +69,7 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 #### Color Scheme
 
-    For the color scheme, I've used gray and black in the navbar and most pages. I chose teal and thistle for some icons and headings to highlight. Overall, I tried to keep a simple classic look.
+  For the color scheme, I've used gray and black in the navbar and most pages. I chose teal and thistle for some icons and headings to highlight. Overall, I tried to keep a simple classic look.
 
 #### Icons
 
@@ -77,10 +79,10 @@ This project is part of my Code Institute Full Stack Software Development studie
 
 #### Typography
 
-    The following fonts were used :
+The following fonts were used :
 
-      * [Bree](https://fonts.google.com/specimen/Bree+Serif)
-      * [sans-serif](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)
+  * [Bree](https://fonts.google.com/specimen/Bree+Serif)
+  * [sans-serif](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)
 
 #### Wireframes
 
@@ -89,6 +91,8 @@ Mock-ups were created early on in this project.
 I've used [Balsamiq](https://balsamiq.com/) Wireframes during the Scope Plane part of the design and planning process for this project.
 
 All of my wireframes for this project can be found here
+
+------------------------
 
 ### Features
 
@@ -218,12 +222,15 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 
 ### Features Left to Implement
 
+
+-----------------------
+
 ### Technologies Used
 
 
   * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used for developing this project.
   * [GitHub](https://github.com/) - Used to store and share all project code remotely.
-  * [Balsamiq]((https://balsamiq.com/) - To create the wireframes for this project.
+  * [Balsamiq](https://balsamiq.com/) - To create the wireframes for this project.
 
 **Front-End Technologies**
   * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
@@ -238,31 +245,70 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 
   **Back-End Technologies**
 
-  * Python 3.6.7 - Used as the back-end programming language.
-  * Django -  Used as my Python web framework.
-  * Heroku - for deployment
-  * PostgreSQL - Used as relational SQL database plugin via Heroku.
+  * [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
+  * [Django](https://docs.djangoproject.com/) -  Used as my Python web framework.
+  * [Heroku](https://www.heroku.com/) - for deployment
+  * [PostgreSQL](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
   
+------------------------
  ## Testing 
 
+### Automated Testing
 
+#### Validation Services
+
+  * **HTML**: I have used [https://validator.w3.org/](https://validator.w3.org/) in order to validate the HTML code.
+
+  * **CSS**: I have used [https://jigsaw.w3.org/css-validator/](https://jigsaw.w3.org/css-validator/) in order to validate the CSS code.
+
+  * **JavaScript**: I have used [https://jshint.com/](https://jshint.com/) in order to check the JavaScript code.
+
+#### Coverage
+Coverage.py was used to provide feedback during testing to check that enough of my code had been tested.
+
+How to run coverage
+  * Activate your virtual environment.
+  * In the terminal enter the following command:
+    * coverage html
+    * Open the newly created htmlcov directory in the root of your project folder.
+    * Open the index.html file inside it.
+    * Run the file in the browser to see the output.
+
+#### Travis
+
+Travis was used for continuous integration testing. At the top of this Readme file you can see that the website passes the Travis test. The Travis Documentation provides all the info needed to set it up.
+
+
+### Manual Testing
+
+Chrome DevTools and physical devices were used throughout development for a number of purposes, one of which was to test the responsiveness and rendering across a range of sizes and devices. As issues were found they were either fixed at the time or noted and returned to later.
+
+The site has been tested successfully on
+
+  Apple Macbook Air - Safari browser
+  Apple iPhone 6,7 &8S - Safari Browser
+  iPad Mini - Safari Browser
+  Desktop - Chrome v.74
+  Desktop - Firefox v.67
+
+------------------------
  ### GitHub Repository
 
-1. Created a repository in GitHub called: “stephyraju/ticktockwatches” https://github.com/stephyraju/ticktockwatches.git
+1. Created a repository in GitHub called: “stephyraju/ticktockwatches” https://github.com/stephyraju/   ticktockwatches
 
 2. Initialised git from the terminal using Git Bash:
 
-git init
+    git init
 
-3. Created a .gitignore file and I have added the files and folders that won't need to push to GitHub (i.e. '*.sqlite3','env.py','.vscode/','.venv/', pycache, *.pyc)
+3. Created a .gitignore file and I have added the files and folders that won't need to push to GitHub (i.e. '*.  sqlite3','env.py','.vscode/','.venv/', pycache, *.pyc)
 
 4. Added the files that I was working on to the Staging area by using:
 
-git add .
+   git add .
 
 5. Run the commit command with the first commit
 
-git commit -m “initial commit"
+  git commit -m “initial commit"
 
 6. Copied from GitHub the following path and I ran it in the Git Bash terminal in order to indicate where my remote repository is:
 
@@ -385,6 +431,7 @@ Set the following config vars:
 
 10. The site is now successfully deployed.
 
+------------------------
 
 ### Credits
 
