@@ -6,21 +6,21 @@
 
 <div class="container mb-5">
     <div class="row">
-          <!-- breadcrumbs -->
-          <div id="breadcrumbs" class="col-12 mt-2">
+        <!-- breadcrumbs -->
+        <div id="breadcrumbs" class="col-12 mt-2">
             <a href="/">Home </a>
             <a class="pl-3" href="{% url 'view_cart' %}">Shopping cart </a>
-          </div>
+        </div>
     </div>
     <div class="row justify-content-center">
-          <heading class="col-11 col-md-10 text-center mt-5">
-            {% if total == 0 %}
-            <h1>Your cart is empty!</h1>
-            <a href="{% url 'all_products2' %}" class="btn btn-dark my-5"> Continue Shopping</a>
-            {% else %}
-            <h1 class="pb-5">Your shopping cart</h1>
-            {% endif %}
-          </heading>  
+        <heading class="col-11 col-md-10 text-center mt-5">
+        {% if total == 0 %}
+        <h1>Your cart is empty!</h1>
+        <a href="{% url 'all_products2' %}" class="btn btn-dark my-5"> Continue Shopping</a>
+        {% else %}
+        <h1 class="pb-5">Your shopping cart</h1>
+        {% endif %}
+        </heading>  
     </div>
     <!-- contents of shopping cart -->
     {% if total != 0 %}
@@ -28,7 +28,7 @@
         <div class="row justify-content-center">
             {% for item in cart_items %}
             <div class= "col-4 mb-5">
-                <img class="mx-auto text-center" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="Product-image" height="100" width="100"></img>
+                <img class="mx-auto text-center" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="Product-image" height="100" width="100"/>
             </div>
             <div class="col-8 mb-5">
                 <div class="row">
@@ -43,7 +43,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <button type="submit" class="btn btn-dark btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><strong>Quantity</strong></button>
-                                    <input class="input-cart px-1" name="quantity" type="number" min="0" max="50" class="form-control" value="{{item.quantity}}">
+                                    <input class="input-cart px-1 form-control" name="quantity" type="number" min="0" max="50" value="{{item.quantity}}">
                                 </div>
                             </div>
                         </form>
@@ -66,4 +66,5 @@
         {% endif %}
     </div>
 </div>
+
 {% endblock %}
