@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 // Search icon display
 function myFunction() {
-
  var x = document.getElementById("searchDiv");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -16,4 +15,4 @@ function myFunction() {
   else {
     x.style.display = "none";
   }
-};
+}
