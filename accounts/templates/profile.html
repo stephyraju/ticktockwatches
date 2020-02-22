@@ -4,30 +4,13 @@
 {% block page_title %}Profile{% endblock %} 
 {% block content %}
 
-<!--Alert messages to the user -->
-<!-- <div class="container-fluid p-0">
-    <div class="row no-gutters">
-        <div class="col-12">
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} text-center">
-                {{ message }}
-            </div>
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-</div> -->
-
 <div class="container log-form">
-    <div class="row mx-auto w-50 justify-content-center">
-        
+    <div class="row mx-auto w-50 justify-content-center"> 
         <div class="col-sm-12 text-center">
             <h2>Hi <span class="text-capitalize">{{user}}</span>!</h2>
             <p>You can update your Profile</p>
         </div>
-            <!-- User can update profile info here -->
-            
+            <!-- User can update profile info here -->  
         <div class="col-sm-12">
             <form method="POST">
                     {% csrf_token %} 
@@ -37,8 +20,8 @@
             </form>
             <br>
         </div>  
-       </div>
     </div>
+</div>
     <!-- <div class="container modal-container">
         <div class="row justify-content-center">
             <div class="col-sm-12 shape shadow" data-toggle="modal" data-target="#modalProductsFavourites">

@@ -6,43 +6,40 @@
 {% block content %}
 
 <!--Alert messages to the user -->
-<div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-12">
-                {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }} text-center">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
+<!-- <div class="container-fluid p-0">
+    <div class="row no-gutters">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
             </div>
+            {% endfor %}
+            {% endif %}
         </div>
-</div>
+    </div>
+</div> -->
 
 <!--SIGN IN FORM-->
-
-
-   <div class="container log-form">
-        <div class="text-center py-5">
-            <h4 class="text-uppercase">Sign In</h4>
-            <br>
-            <p>I have A Tick Tock Account</p>
-            <p>Enter your details below</p>
-            <p class="text-muted mb-3">Need an account? <a href="{% url 'registration' %}"
-                    class="blue-link">Register here.</a></p>
-        </div>
-       <div class="row mx-auto w-50">
-            <div class="col-sm-12">
-                <form method="POST">
-                        {% csrf_token %} {{ login_form | as_bootstrap }}
-                        <br>
-                        <button type="submit" class="btn-block btn-dark">Log In</button>
-                </form>
-                
-                <p><a href="{% url 'password_reset' %}" class="blue-link">Forgot Password ?</a></p>
-            </div>
-       </div>
+<div class="container log-form">
+    <div class="text-center py-5">
+        <h4 class="text-uppercase">Sign In</h4>
+        <br>
+        <p>I have A Tick Tock Account</p>
+        <p>Enter your details below</p>
+        <p class="text-muted mb-3">Need an account? <a href="{% url 'registration' %}"
+                class="blue-link">Register here.</a></p>
     </div>
+    <div class="row mx-auto w-50">
+        <div class="col-sm-12">
+            <form method="POST">
+                {% csrf_token %} {{ login_form | as_bootstrap }}
+                <br>
+                <button type="submit" class="btn-block btn-dark">Log In</button>
+            </form>
+            <p><a href="{% url 'password_reset' %}" class="blue-link">Forgot Password ?</a></p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

@@ -6,29 +6,26 @@
 
 <!--Alert messages to the user -->
 <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-12">
-                {% if messages %}
-                {% for message in messages %}
-                <div class="alert alert-{{ message.tags }} text-center">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% endif %}
+    <div class="row no-gutters">
+        <div class="col-12">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} text-center">
+                {{ message }}
             </div>
+            {% endfor %}
+            {% endif %}
         </div>
+    </div>
 </div>
 
 <!--Registration Form-->
-
-
    <div class="container log-form">
         <div class="text-center py-5">
             <h4 class="text-uppercase">Create An Account</h4>
             <br>
          <p class="text-muted mb-3">Already have an account? 
-             <a href="{% url 'login' %}" class="blue-link">Log in</a></p>
-            
+             <a href="{% url 'login' %}" class="blue-link">Log in</a></p>    
         </div>
        <div class="row mx-auto w-50">
             <div class="col-sm-12">
@@ -42,5 +39,5 @@
             </div>
        </div>
     </div>
-
+    
 {% endblock %}
