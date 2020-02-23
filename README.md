@@ -90,7 +90,7 @@ Mock-ups were created early on in this project.
 
 I've used [Balsamiq](https://balsamiq.com/) Wireframes during the Scope Plane part of the design and planning process for this project.
 
-All of my wireframes for this project can be found here
+All of my wireframes for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/design/wireframes)
 
 ------------------------
 
@@ -280,6 +280,12 @@ Travis was used for continuous integration testing. At the top of this Readme fi
 
 
 ### Manual Testing
+
+**Checklist**
+
+Click [here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf) to see the checklist that I have used to test the main features.
+
+**Responsiveness**
 
 Chrome DevTools and physical devices were used throughout development for a number of purposes, one of which was to test the responsiveness and rendering across a range of sizes and devices. As issues were found they were either fixed at the time or noted and returned to later.
 
