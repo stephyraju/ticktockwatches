@@ -11,11 +11,6 @@ class TestCartViews(TestCase):
         self.user = User.objects.create_user(
             username='username', email='test@email.com', password="pass123word")
 
-    # def test_cart_page_authenticated_user(self):
-    #     c.login(username="username", password="pass123word")
-    #     page = c.get('/checkout/')
-    #     self.assertEqual(page.status_code, 200)
-    #     self.assertTemplateUsed(page.status_code, "checkout.html")
 
     def test_cart_cannot_be_access_by_loggedout_user(self):
         page = c.logout()      
