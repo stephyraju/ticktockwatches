@@ -255,7 +255,7 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 
 ### Automated Testing
 
-#### Validation Services
+### Validation Services
 
   * **HTML**: I have used [https://validator.w3.org/](https://validator.w3.org/) in order to validate the HTML code.
 
@@ -263,7 +263,7 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 
   * **JavaScript**: I have used [https://jshint.com/](https://jshint.com/) in order to check the JavaScript code.
 
-#### Coverage
+### Coverage
 Coverage.py was used to provide feedback during testing to check that enough of my code had been tested.
 
  I built 52 different tests to encompass most of my python views, forms, and models. Using the coverage.py test package, those 52 tests have provided an overall result of 75% test coverage.
@@ -280,7 +280,7 @@ How to run coverage
 
 All the coverage report for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/documents/coverage_report)
 
-#### Travis
+### Travis
 
 Travis was used for continuous integration testing. At the top of this Readme file you can see that the website passes the Travis test. The Travis Documentation provides all the info needed to set it up.
 
@@ -297,11 +297,15 @@ Chrome DevTools and physical devices were used throughout development for a numb
 
 The site has been tested successfully on
 
-  Apple Macbook Air - Safari browser
-  Apple iPhone 6,7 &8S - Safari Browser
-  iPad Mini - Safari Browser
-  Desktop - Chrome v.74
-  Desktop - Firefox v.67
+    Apple Macbook Air - Safari browser
+
+    Apple iPhone 6,7 &8S - Safari Browser
+
+    iPad Mini - Safari Browser
+
+    Desktop - Chrome v.74
+    
+    Desktop - Firefox v.67
 
 ------------------------
  ### GitHub Repository
