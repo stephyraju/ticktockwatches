@@ -287,25 +287,26 @@ Travis was used for continuous integration testing. At the top of this Readme fi
 
 ### Manual Testing
 
-**Checklist**
+
+I have a detailed checklist of all the manual testing that has been done to confirm all areas of the site work as expected.
 
 Click [here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf) to see the checklist that I have used to test the main features.
 
-**Responsiveness**
+### Responsiveness
 
 Chrome DevTools and physical devices were used throughout development for a number of purposes, one of which was to test the responsiveness and rendering across a range of sizes and devices. As issues were found they were either fixed at the time or noted and returned to later.
 
 The site has been tested successfully on
 
-    Apple Macbook Air - Safari browser
+Apple Macbook Air - Safari browser
 
-    Apple iPhone 6,7 &8S - Safari Browser
+Apple iPhone 6,7 &8S - Safari Browser
 
-    iPad Mini - Safari Browser
+iPad Mini - Safari Browser
 
-    Desktop - Chrome v.74
-    
-    Desktop - Firefox v.67
+Desktop - Chrome v.74
+
+Desktop - Firefox v.67
 
 ------------------------
  ### GitHub Repository
