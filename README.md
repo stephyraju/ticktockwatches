@@ -251,9 +251,9 @@ At the bootom of the footer has copyright information for ticktock watch shop.
   * [PostgreSQL](https://www.postgresql.org/) - Used as relational SQL database plugin via Heroku.
   
 ------------------------
- ## Testing 
+ # Testing 
 
-### Automated Testing
+## Automated Testing
 
 ### Validation Services
 
@@ -278,19 +278,20 @@ How to run coverage
     * Open the index.html file inside it.
     * Run the file in the browser to see the output.
 
-All the coverage report for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/documents/coverage_report)
+All the **coverage report** for this project can be found **[here](https://github.com/stephyraju/ticktockwatches/tree/master/documents/coverage_report)**
 
 ### Travis
 
 Travis was used for continuous integration testing. At the top of this Readme file you can see that the website passes the Travis test. The Travis Documentation provides all the info needed to set it up.
 
+[![Build Status](https://travis-ci.com/stephyraju/ticktockwatches.svg?branch=master)](https://travis-ci.com/stephyraju/ticktockwatches)
 
-### Manual Testing
+## Manual Testing
 
 
 I have a detailed checklist of all the manual testing that has been done to confirm all areas of the site work as expected.
 
-Click [here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf) to see the checklist that I have used to test the main features.
+Click **[here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf)** to see the **checklist** that I have used to test the main features.
 
 ### Responsiveness
 
