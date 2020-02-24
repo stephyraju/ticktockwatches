@@ -6,22 +6,12 @@ from django.http import HttpResponseRedirect
 from django.conf import settings
 from favourites.views import add_remove_favourites
 
-# Create your views here.
-# def all_products(request):
-#     products = Product.objects.all()
-#     return render(request, "index.html", {"products": products})
-
 def all_products2(request):
 
     products = Product.objects.all()
-    # favourites = Favourites.objects.filter(user=request.user)
     bestseller = Product.objects.filter(bestseller=True)
-    # is_favourite = False
     paginator = Paginator(products, 8)  # Show 8 products per page
     
-    # if products.favourite.filter(id=request.user.id).exists():
-    #     is_favourite = True
-
     page = request.GET.get('page')
     try:
         products = paginator.page(page)
@@ -32,10 +22,8 @@ def all_products2(request):
 
     context = {
         'products': products,
-        'bestseller': bestseller,
-        # 'favourites':[favourite.product for favourite in favourites]
+        'bestseller': bestseller
     }
-
     return render(request, "products.html", context)
     
 def view_menswatch(request):
@@ -191,15 +179,11 @@ def product_detail(request, pk):
 def view_index(request):
     """ Renders home page with 4 random featured products in featured listing section """
 
-    # featured_products = Product.objects.filter(featured=True).order_by('-featured'[:4])
-    # featured_products = Product.objects.filter(featured=True)
     featured_products = Product.objects.filter(featured=True).order_by('?')[:4]
     bestseller = Product.objects.filter(bestseller=True)
-    # topbrand_products = Product.objects.filter(topbrand=True).order_by('?')[:6]
     context = {
         'featured_products': featured_products,
         'bestseller': bestseller,
-        # 'topbrand_products':topbrand_products ,
         'category': 'All products'
     }
     return render(request, "index.html", context)
