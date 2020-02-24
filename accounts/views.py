@@ -2,15 +2,8 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-# from favourites.models import Favourites
 from django.http import HttpResponseRedirect
 from accounts.forms import UserLoginForm, UserRegistrationForm, UserUpdateForm
-
-# Create your views here.
-
-# def index(request):
-#     '''Return the home page'''
-#     return render(request, 'index.html')
 
 @login_required
 def logout(request):
@@ -59,7 +52,7 @@ def registration(request):
             if user:
                 auth.login(request=request, user=user)
                 messages.success(request, 'You have been succesfully registered')
-                return redirect(reverse('index'))
+                retu                    rn redirect(reverse('index'))
             else:
                 messages.error(request, "Unable to register your account at this time")
     
@@ -70,14 +63,10 @@ def registration(request):
             "registration_form": registration_form})
 
 @login_required
-def user_profile(request):
-    '''
+def user_profile(               
     Renders profile page for user with a form to update
     their information.
     '''
-    # favourites = Favourites.objects.filter(user=request.user)
-    # favourites = Favourites.objects.all()
-    # user_profile = User.objects.get(email=request.user.email)
     if request.method == 'POST':
         form = UserUpdateForm(request.POST, instance=request.user)
         if form.is_valid():
@@ -87,8 +76,6 @@ def user_profile(request):
     else:
         form = UserUpdateForm(instance=request.user)
 
-    return render(request, 'profile.html', {'form':form,
-                                            # 'user_profile':user_profile,
-                                            #  'favourites':favourites 
-                                            })
+    return render(request, 'profile.html', {'form':form})
+                                            
 

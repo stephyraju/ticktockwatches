@@ -22,46 +22,5 @@
         </div>  
     </div>
 </div>
-    <!-- <div class="container modal-container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12 shape shadow" data-toggle="modal" data-target="#modalProductsFavourites">
-                <h4 class="fav">Your Favourites</h4>
-                <i class="far fa-heart fa-2x pl-2" style="color: palevioletred;"></i>
-            </div>
-        </div>
-    </div> -->
-    <!-- Modal Favourites-->
- <!-- <div class="modal fade" id="modalProductsFavourites" tabindex="-1" role="dialog" aria-labelledby="ModalTitle2" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ModalTitle2">These are your favourites</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                {% if favourites  %}
-                    {% for favourite in favourites %}
-                        <a href="{% url 'product_detail' favourite.product_id %}">
-                            <div class="favourite-read-link row justify-content-center align-items-center">
-                                <div class="col-4">
-                                    <img width="50" src="{{MEDIA_URL}}{{favourite.product.image}}" alt="watch image">
-                                </div>
-                                <div class="col-6">
-                                    {{ favourite.title }}
-                                </div>
-                            </div>
-                        </a>
-                    {% endfor %}
-                {% else %}
-                    <p class="alert alert-info text-center" role="alert">You haven't saved any watch as favourite</p>
-                {% endif %}
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div> --> 
+   
 {% endblock %}
