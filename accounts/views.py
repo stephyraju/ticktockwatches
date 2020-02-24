@@ -52,7 +52,7 @@ def registration(request):
             if user:
                 auth.login(request=request, user=user)
                 messages.success(request, 'You have been succesfully registered')
-                retu                    rn redirect(reverse('index'))
+                return redirect(reverse('index'))
             else:
                 messages.error(request, "Unable to register your account at this time")
     
@@ -63,7 +63,8 @@ def registration(request):
             "registration_form": registration_form})
 
 @login_required
-def user_profile(               
+def user_profile(request):
+    '''
     Renders profile page for user with a form to update
     their information.
     '''
@@ -77,5 +78,3 @@ def user_profile(
         form = UserUpdateForm(instance=request.user)
 
     return render(request, 'profile.html', {'form':form})
-                                            
-
