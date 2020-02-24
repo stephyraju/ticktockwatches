@@ -90,7 +90,7 @@ Mock-ups were created early on in this project.
 
 I've used [Balsamiq](https://balsamiq.com/) Wireframes during the Scope Plane part of the design and planning process for this project.
 
-All of my wireframes for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/design/wireframes)
+All of my wireframes for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/documents/wireframes)
 
 ------------------------
 
@@ -266,6 +266,10 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 #### Coverage
 Coverage.py was used to provide feedback during testing to check that enough of my code had been tested.
 
+ I built 52 different tests to encompass most of my python views, forms, and models. Using the coverage.py test package, those 52 tests have provided an overall result of 75% test coverage.
+
+ In some cases the tests were quite complicated and in these cases I have chosen to test manually since I was running out of time to present the project.
+
 How to run coverage
   * Activate your virtual environment.
   * In the terminal enter the following command:
@@ -273,6 +277,8 @@ How to run coverage
     * Open the newly created htmlcov directory in the root of your project folder.
     * Open the index.html file inside it.
     * Run the file in the browser to see the output.
+
+All the coverage report for this project can be found [here](https://github.com/stephyraju/ticktockwatches/tree/master/documents/coverage_report)
 
 #### Travis
 
