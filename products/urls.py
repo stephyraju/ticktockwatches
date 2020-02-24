@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^view_tissot/$', view_tissot, name='tissot'),
     url(r'^view_michaelkores/$', view_michaelkores, name='michaelkores'),
     url(r'^view_lacoste/$', view_lacoste, name='lacoste'),
-    url(r'^view_lorus$', view_lorus, name='lorus'),
+    url(r'^view_lorus/$', view_lorus, name='lorus'),
     url(r'^view_citizen/$', view_citizen, name='citizen'),
     url(r'^(?P<pk>\d+)/$', product_detail, name='product_detail')
 ]
