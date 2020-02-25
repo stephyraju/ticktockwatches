@@ -170,7 +170,7 @@ In the footer, there is a link for the customer to reach this page. In this page
  
  The reurn page features the reurn policies of the shop.
 
-#### Cart App
+### Cart App
 
 **Cart Page**
 
@@ -322,7 +322,7 @@ I have a detailed **checklist** of all the manual testing that has been done to 
 
 **Click** **[here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf)** to see the **checklist** that I have used to test the main features.
 
-Note: **Stripe payment testing**
+#### Stripe payment testing
 
 My checkout app is using the stripe payment for the payment option. I tested this by using Stripes test card (4242 4242 4242 4242) I tested the forms and ensured all my validation worked as expected and my logic was performing as expected. The checkout app works from the Stripe API.
 
@@ -493,10 +493,23 @@ Set the following config vars:
 
 ### Credits
 
-#### Acknoledgement
+**Content**
+
+All the product details, images and the contents for the services and policies are from https://www.fields.ie/ , https://www.watchshop.com/ & Wikipedia
+
+**Tutorials**
+
+* [Python Django Tutorial by Corey Schafer](https://www.youtube.com/watch?v=F5mRW0jo-U4)
+
+* [https://stackoverflow.com/questions/12758786/redirect-return-to-same-previous-page-in-django/12758859](https://stackoverflow.com/questions/12758786/redirect-return-to-same-previous-page-in-django/12758859)
+
+* The [Django documentation](https://devdocs.io/django~1.11/)
+
+#### Acknowledgement
+The tutors, mentors and support staff at Code Institute
 
 Special thanks to Guido Cecilio Garcia, my Code Institute mentor, for his guidance and advice whilst working on this project.
 
 **Disclaimer**
 
- The content of this website is educational purposes only.
+ The content of this website is for educational purposes only.
