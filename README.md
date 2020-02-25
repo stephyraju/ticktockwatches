@@ -491,11 +491,11 @@ Set the following config vars:
 
 ------------------------
 
-### Credits
+## Credits
 
 **Content**
 
-All the product details, images and the contents for the services and policies are from https://www.fields.ie/ , https://www.watchshop.com/ & Wikipedia
+All the product details, images and the contents for the services and policies are from https://www.watchshop.com/, https://www.fields.ie/ & Wikipedia and I modifed to use in the project.
 
 **Tutorials**
 
@@ -505,7 +505,7 @@ All the product details, images and the contents for the services and policies a
 
 * The [Django documentation](https://devdocs.io/django~1.11/)
 
-#### Acknowledgement
+### Acknowledgement
 The tutors, mentors and support staff at Code Institute
 
 Special thanks to Guido Cecilio Garcia, my Code Institute mentor, for his guidance and advice whilst working on this project.
