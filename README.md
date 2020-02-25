@@ -1,6 +1,16 @@
 [![Build Status](https://travis-ci.com/stephyraju/ticktockwatches.svg?branch=master)](https://travis-ci.com/stephyraju/ticktockwatches)
 
-## TickTockWatches   - Full Stack Framework Milestone 
+# [TickTock Watches](https://ticktockwatches.herokuapp.com/)
+
+Milestone Project - 4
+
+This is the last milestone project for the Fullstack Web Developer course with Code Institute. The aim of the project is to showcase my skills learnt throughout this course. 
+
+Throughout this project I have used [Python](https://www.python.org/), a high-end programming language along with [Django](https://www.djangoproject.com/), a python framework.
+
+The deployed site can be found at [TickTock](https://ticktockwatches.herokuapp.com/).
+
+----------
 
 ## Table Of Contents
 
@@ -38,28 +48,36 @@
 
 -----------------------------
 
-### UX
+## UX
 
 This project is part of my Code Institute Full Stack Software Development studies, specifically the Full Stack Frameworks module. The purpose of the project was to create a website for an online watch shop where the company can displays their products for the customers. This website is designed in a simple and efficient way for the customers to have a smooth and pleasant shopping experience.
 
-### User Stories
+## User Stories
 
   * As a user I want to view the site from any device (mobile, tablet, desktop).
-  * As a user I want to See the products without login.
+  * As a user I want to see the products without login.
   * As a user I want to create my account.
+  * As a user I want to view my profile.
   * As a user I want to update my profile.
   * As a user I want to login and logout.
   * As a user I want to be able to change my password.
   * As a user I want to filter the products based on gender and brand.
   * As a user I want to search for a product.
+  * As a user I want to be able to save products as favourites.
+  * As a user I want to be able to see the product details.
+  * As a user I want to be able add product to my cart and remove if I change my mind.
   * As a user I want to be able to navigate the shop easily, find what I need and make a safe and secure purchase.
-  * As a user I want to contact the shop for any quiries.
+  * As a user I can view my order summary before checkout.
+  * As a userI want to be able to follow the shop on social media.
+  * As a user I can see the services and policies of the shop.
+  * As a user I can view the frequently asked questions page for any questions about the order.
+  * As a user I want to be able to contact the shop for any quiries via contact form.
 
   
-### Design
+## Design
 
 
-#### Framework
+### Framework
 
   * [Bootstrap 4](https://getbootstrap.com/)
   * [jQuery 3.4.1](https://code.jquery.com/jquery/)
@@ -67,24 +85,24 @@ This project is part of my Code Institute Full Stack Software Development studie
   * [Django 1.11](https://www.djangoproject.com/)
     * Django is a free and open-source web framework that I've used to render the back-end Python with the front-end Bootstrap. We were taught how to use Django 1.11 in the lessons, despite Django 2.0 being the current version,I used Django 1.11
 
-#### Color Scheme
+### Color Scheme
 
   For the color scheme, I've used gray and black in the navbar and most pages. I chose teal and thistle for some icons and headings to highlight. Overall, I tried to keep a simple classic look.
 
-#### Icons
+### Icons
 
 * [Font Awsome 5.11.2](https://fontawesome.com/)
 
     I prefer to use Font Awesome icons for this project, as they have significantly more icons to use. 
 
-#### Typography
+### Typography
 
 The following fonts were used :
 
   * [Bree](https://fonts.google.com/specimen/Bree+Serif)
   * [sans-serif](https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans)
 
-#### Wireframes
+### Wireframes
 
 Mock-ups were created early on in this project.
 
@@ -94,9 +112,9 @@ All of my wireframes for this project can be found [here](https://github.com/ste
 
 ------------------------
 
-### Features
+## Features
 
-#### Accounts App
+### Accounts App
 
 The accounts app will allow users to register for free and create their own unique account. This is built using Django's authentication and authorization to validate profile data. Passwords are hashed for security purposes!
 
@@ -104,7 +122,7 @@ The users will register using the registration form. Registered users will be ab
 
 The users can also reset their password if they forgot the original password using the reset password link on the login.html page.
 
-#### Products App
+### Products App
 
 **Index (Home Page)**
 
@@ -127,7 +145,7 @@ In this page user can filter the products by gender.
 On this page the user can see all the details about the product. The product title, Price and the product features.
 If the user want to add the product to the cart they can do from here as well.
 
-#### Home app
+### Home app
 
  **About.html**
 
@@ -164,7 +182,7 @@ A quantity field is displayed with each cart item, giving the ability to adjust 
 
 The user can see the Total of the shopping cost and this will be updated when the user update the quantity in their cart.
 
-#### Checkout App
+### Checkout App
 
 **Checkout.html**
 
@@ -176,13 +194,19 @@ Once the payment is successfull, a message will be displayed.
 
 If there is an error with the payment, the user will be notified with an error message.
 
-#### Search App
+### Search App
 
 This will allow the user to search for a product based on the title.
 
 The search icon is visible from all the pages. When the user click on the icon, the search bar will pop up.
 
-#### Base template 
+### Favourite app
+
+This will allow users to add or remove the products by clicking the heart icon on the product card.
+
+The user can see all their favourite products in the favourite page which can be accessed by clicking on the heart icon from the navbar.
+
+### Base template 
 
 Features available from all the pages
 
@@ -220,12 +244,17 @@ The footer also linked to social media accounts.
 
 At the bootom of the footer has copyright information for ticktock watch shop.
 
-### Features Left to Implement
+## Features Left to Implement
 
+1. Order confirmation report and emails to customer whey they place an order.
+2. Checkout pages to include a field for customer to get delivery charges.
+3. Add sorting and filtering options to make it more easier to slelect the product.
+4. Review and rating section for users for each product they buy.
+5. User profile page will show more details like buying history of the user.
 
 -----------------------
 
-### Technologies Used
+## Technologies Used
 
 
   * [Visual Studio Code](https://code.visualstudio.com/) - The IDE used for developing this project.
@@ -289,9 +318,20 @@ Travis was used for continuous integration testing. At the top of this Readme fi
 ## Manual Testing
 
 
-I have a detailed checklist of all the manual testing that has been done to confirm all areas of the site work as expected.
+I have a detailed **checklist** of all the manual testing that has been done to confirm all areas of the site work as expected.
 
-Click **[here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf)** to see the **checklist** that I have used to test the main features.
+**Click** **[here](https://github.com/stephyraju/ticktockwatches/blob/master/documents/my_checklist%20.pdf)** to see the **checklist** that I have used to test the main features.
+
+Note: **Stripe payment testing**
+
+My checkout app is using the stripe payment for the payment option. I tested this by using Stripes test card (4242 4242 4242 4242) I tested the forms and ensured all my validation worked as expected and my logic was performing as expected. The checkout app works from the Stripe API.
+
+Card number - 4242424242424242
+
+CVC - Any 3 digit number.
+
+Expiry date - Any date in the future.
+
 
 ### Responsiveness
 
@@ -337,9 +377,9 @@ Desktop - Firefox v.67
 7. I've run regular commits after every important update to the code, and I pushed the changes to GitHub.
 
 
-### Deployment
+## Deployment
 
-#### How to run this project locally
+### How to run this project locally
 
 To run this project on your own IDE follow the instructions below:
 
@@ -410,7 +450,7 @@ python manage.py runserver.
     * python3 manage.py collectstatic
 
 
-#### Heroku Deployment
+### Heroku Deployment
 
     To deploy TickTock  to heroku, take the following steps:
 
