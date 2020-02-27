@@ -11,11 +11,11 @@
     <div class="container-fluid title-container">
         <div class="row">
             <div class="col-md-6 title-img">
-                <img class="responsive-img" src="{% static 'img/ladieswatch.jpg' %}" alt="title image">
+                <img class="img-fluid" src="{% static 'img/ladieswatch.jpg' %}" alt="ladies watches">
                 <a class="btn btn-primary text-uppercase" href="{% url 'ladieswatch' %}">Ladies Watches</a>
             </div>
             <div class="col-md-6 title-img">
-                <img class="responsive-img" src="{% static 'img/menswatch.png' %}" alt="mens watches">
+                <img class="img-fluid" src="{% static 'img/menswatch.png' %}" alt="mens watches">
                 <a class="btn btn-primary text-uppercase" href="{% url 'menswatch' %}">Mens Watches</a>
             </div>
         </div>
@@ -35,13 +35,13 @@
 <!--Product-showcase featured watches-->
 <section class="products-showcase">
     <div class="container featured-products">
-        <div class="row mx-auto">
+        <div class="row mx-auto justify-content-center">
            <div class="col-12 pb-5">
                 <h3>Shop Our Featured Watches</h3>
             </div>
              <div class="card-deck"> 
                 {% for product in featured_products %}
-                 <div class="col-xs-12 col-md-4 col-lg-3 mx-auto featured-card">
+                 <div class="col-xs-12 col-md-6 col-lg-3 mx-auto featured-card">
                     <div class="card" style="width: 17rem;">
                          <a href="{% url 'product_detail' product.id %}"  class="product-image">
                              <img class="card-img"src="{{MEDIA_URL}}{{product.image}}" class="card-img-top product-image" alt="{{product.name}}" />
@@ -51,7 +51,7 @@
                              <div class="product-label text-center">Bestseller</div>
                              {% endif %}
                              <div class="card-body product-details">
-                             <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
+                             <h6 class="card-title product-name"><a href="{% url 'product_detail' product.id %}"  class="product-title">{{ product.title }}</a></h6>
                          
                              <p class="product-price">€ {{ product.price }}</p>
                          </div>
@@ -94,7 +94,7 @@
           <div class="card mt-2 brand-card">    
             <a href="{% url 'tissot' %}">
             <img class="card-img-top pt-2" src="{% static 'img/tissot.jpg' %}" alt={{product.title}}></a>
-            <div class="overlay"></div>
+             <div class="overlay"></div>
             <div class="card-body">
               <h5 class="card-title text-center pt-2">Tissot</h5>
             </div>      
@@ -102,7 +102,7 @@
         </div>
        
         <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-          <div class="card mt-2">
+          <div class="card mt-2 brand-card">
             <a href="{% url 'citizen' %}">
             <img class="card-img-top pt-2" src="{% static 'img/citiw.jpg' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
@@ -113,7 +113,7 @@
        </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-          <div class="card mt-2">
+          <div class="card mt-2 brand-card">
             <a href="{% url 'lacoste' %}">
             <img class="card-img-top pt-2" src="{% static 'img/lacoste.jpg' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
@@ -124,7 +124,7 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-          <div class="card mt-2">
+          <div class="card mt-2 brand-card">
             <a href="{% url 'rolex' %}">
             <img class="card-img-top pt-2" src="{% static 'img/rolex.png' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
@@ -135,7 +135,7 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-2 ">
-          <div class="card mt-2">
+          <div class="card mt-2 brand-card">
             <a href="{% url 'lorus' %}">
             <img class="card-img-top pt-2" src="{% static 'img/lorus.jpg' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
@@ -146,7 +146,7 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-          <div class="card mt-2">
+          <div class="card mt-2 brand-card">
             <a href="{% url 'tedbaker' %}">
             <img class="card-img-top pt-2" src="{% static 'img/tedM.jpg' %}" alt="Card image cap"></a>
             <div class="overlay"></div>
