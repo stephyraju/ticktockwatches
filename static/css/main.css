@@ -335,6 +335,7 @@ footer ul {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    text-align: left;
   }
   .dropdown-content a {
     color: black;
@@ -394,24 +395,31 @@ footer ul {
    outline: none;
  }
  
- .favorite .fas, 
+ /* .favorite .fas, 
  .favourited.far {
   font-size: 1.8em;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-}
-.modal-container .shape {
+} */
+/* .modal-container .shape {
   max-width: 250px;
   margin: 18px;
   padding: 10px;
   background-color: #262626;
-}
-.fav {
+} */
+/* .fav {
   display: inline;
   padding-right: 5px;
   padding-left: 5px;
   color: #ddd;
+} */
+.fav-button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
 }
 /*------ Contact Page ------*/
 .contact-container {
