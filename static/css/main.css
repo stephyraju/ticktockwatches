@@ -6,12 +6,14 @@ body {
 h3 h4 {
     font-family: Bree, sans-serif;
 }
-/* Forms */
+/*------- Forms ------ */
+
 .log-form {
 padding-top: 20px;
 padding-bottom: 80px;
 }
-/* Navbar */
+/*----- Navbar ----------*/
+
 .icons {
   color:rgb(0, 128, 129);
   width: 20px;
@@ -20,7 +22,7 @@ padding-bottom: 80px;
   z-index: 1;
   cursor: pointer;
 }
-/* search box */
+/*------- search box ----------*/
 
 .search-btn {
   background-color: transparent;
@@ -58,7 +60,7 @@ padding-bottom: 80px;
     color: #333;
   }
 
-/* Footer */
+/*----------- Footer -------------*/
 
 #footer {
     background-color: #262626;
@@ -133,7 +135,7 @@ footer ul {
     text-align: center;
   }
   }
-/* Messages */
+/*------------ Messages --------------*/
 
 .messages {
   background-color: #e6e6e6;
@@ -148,7 +150,7 @@ footer ul {
     color: #ff6600;
   }
 
-/****  Home Page ****/
+/*-----------  Home Page -----------*/
 
 .title-img img {
     display: block;
@@ -156,27 +158,7 @@ footer ul {
     height: 35vh;
     object-fit: cover;
   }
-@media only screen and (min-width: 768px) and (max-width:1024px){
-.title-img {
-  max-width: 100%;
-  height: auto;
-}
-.title-container
-.btn {
-    position: absolute;
-    top: 23%;
-    left: 50%;
-    transform: translate(-50%, 150%);
-    -ms-transform: translate(-50%, 150%);
-    background-color: #111;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 0px;
-    text-align: center;
-}
-  }
+
 .title-container
 .btn {
     position: absolute;
@@ -197,6 +179,28 @@ footer ul {
     padding-left: 7px ! important;
     padding-right: 7px ! important;
 }
+@media only screen and (max-width:480px) {
+  .title-img img{
+    max-width: 100%;
+    height: 30vh;
+    padding-bottom: 10px;
+  }
+.title-container
+.btn {
+    transform: translate(-50%, 50%);  
+    padding: 5px 10px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width:1024px){
+  .title-img img{
+    max-width: 100%;
+    height: auto;
+  }
+  .title-container
+  .btn {    
+      transform: translate(-50%, 50%);
+  }
+    }
 .promotion-banner {
     background-color: #404040;
     height: 50px;
@@ -225,8 +229,26 @@ footer ul {
     border-radius: 0px;
     margin: 0 auto; 
     margin-bottom: 10px;
-   
   }
+
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+  .featured-card {
+    margin-bottom: 15px;
+  }
+}
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  .card-deck .card {
+    width: 90% !important;
+  }
+  .brand-card{
+    height: 230px;
+    }
+}
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
   }
@@ -258,9 +280,6 @@ footer ul {
     font-weight: 300;
     line-height: 1.2;
 }
-
-
-/*top-brand*/
 .overlay {
   display: block;
   position: absolute;
@@ -273,6 +292,17 @@ footer ul {
   z-index: 0;
   pointer-events: none;
 }
+.product-label {
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  width: 110px;
+  z-index: 2;
+  background: #111;
+  color: #fff;
+}
+/*-- top-brand --*/
+
 .brand-card a {
   color: black;
   text-decoration: none;
@@ -283,17 +313,13 @@ footer ul {
    text-decoration:none; 
    cursor:pointer;  
 }
-
-.product-label {
-  position: absolute;
-  top: 16px;
-  left: 15px;
-  width: 110px;
-  z-index: 2;
-  background: #111;
-  color: #fff;
+@media screen and (max-width: 1366px) {
+.brand-card .overlay {
+  display: none !important;
 }
-/*Product page*/
+}
+
+/*--------- Product page ------------*/
 
 .delivery-banner {
     background-color: #404040;
@@ -339,7 +365,7 @@ footer ul {
     text-decoration: none;
     color: black;
 }
-/*Pagination */
+/*--- Pagination ----*/
 
 .pagination a {
   color : rgb(0, 128, 129);
@@ -351,7 +377,7 @@ footer ul {
   color:rgb(0, 128, 129);
   text-decoration: none;
 }
-/*Cart page */
+/*------------ Cart page ---------------*/
 
  @media (min-width: 1200px) { 
 .cart-container {
@@ -362,14 +388,12 @@ footer ul {
 }
 
  }
+ /*-- Favourite--*/
  .fav-form button:focus,
  fav-form button:active {
    outline: none;
  }
  
- /* .favorite {
-   color: rgb(224, 222, 216);
- } */
  .favorite .fas, 
  .favourited.far {
   font-size: 1.8em;
@@ -377,45 +401,26 @@ footer ul {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-
-/* .favorite .fa:hover {
-  color: rgb(240, 208, 204);
-} */
-
-/* .favorited {
-  color: rgb(243, 79, 73);
-} */
 .modal-container .shape {
   max-width: 250px;
   margin: 18px;
   padding: 10px;
   background-color: #262626;
 }
-/* .modal-container .shadow:hover,
-.detail-profile-wrapper .shadow:hover {
-  background-color: ;
-} */
 .fav {
   display: inline;
   padding-right: 5px;
   padding-left: 5px;
   color: #ddd;
 }
- /* .favorite,
- .favorited {
-   float: right;
-/* .brand-card a:link {
-    text-decoration: none;
-    color: inherit; 
-}
-/* Contact Page */
+/*------ Contact Page ------*/
 .contact-container {
   border: thistle;
   border-radius: 6px;
   padding: 1rem;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
 }
-/*Accounts app */
+/*----- Accounts app --------*/
  a.blue-link {
    text-decoration: none;
    color: rgb(0, 128, 129);
