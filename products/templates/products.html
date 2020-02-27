@@ -60,20 +60,18 @@
                 </div>
              {% else %}
              {% for product in products %}
-                 <div class="col-xs-12 col-md-4 col-lg-3 mx-auto">
-                    <div class="card" style="width: 18rem;">
+                 <div class="col-xs-12 col-md-5 offset-md-1 col-lg-3 mx-auto mb-4">
+                    <div class="card" style="width: 17rem;">
 
                         <!-- form to add/remove products to the favourites list -->
                         <form class="text-right fav-form" method="POST" action="{% url 'add_remove_favourites' product.id %}">
                             {% csrf_token %}
-                            <button type="submit">
+                            <button class="fav-button" type="submit">
                                 <!-- check if the product is already a favourite -->
                                 {% if user|is_user_in_fav:product.favourite %}
-                                    <span class="favorite text-right"><i class="far fa-heart" style="color:rgb(0, 128, 129)"></i></span>
-                                    TEST-01
+                                <span class="favorited text-right"><i class="fas fa-heart fa-lg" style="color:rgb(0, 128, 129)"></i></span>            
                                 {% else %}
-                                    <span class="favorited text-right"><i class="fas fa-heart" style="color:rgb(0, 128, 129)"></i></span>
-                                    TEST-02
+                                <span class="favorite text-right"><i class="far fa-heart fa-lg" style="color:rgb(0, 128, 129)"></i></span>      
                                 {% endif %}
                             </button>
                         </form>
@@ -84,7 +82,7 @@
                              <div class="product-label text-center">Bestseller</div>
                              {% endif %}
                              <div class="card-body product-details">
-                             <h6 class="card-title product-name"><a href="#"  class="product-title">{{ product.title }}</a></h6>
+                             <h6 class="card-title product-name"><a href="{% url 'product_detail' product.id %}"  class="product-title">{{ product.title }}</a></h6>
                          
                              <p class="product-price">€ {{ product.price }}</p>
                          </div>
