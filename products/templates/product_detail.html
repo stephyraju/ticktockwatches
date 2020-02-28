@@ -19,7 +19,7 @@
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group add-checkout-div-product">
-                    <input class="input-add-product" name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Qty">
+                    <input class="input-add-product" name="quantity" type="number" min="1" max="999" class="form-control" value="1" required>
                     <span class="input-group-btn">
                     <button class="btn btn-dark btn-sm" type="submit">Add to Cart</button></span>
                 </div>
