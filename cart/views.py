@@ -43,3 +43,16 @@ def adjust_cart(request, id):
     return redirect(reverse('view_cart'))
 
 
+@login_required
+def remove_from_cart(request, id):
+    """
+    Remove a product from the cart clicking the x button.
+    """
+    cart = request.session.get('cart',{})
+
+    # Removes product from cart
+    cart.pop(id)
+    
+    # Saves the cart into the session
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
