@@ -115,9 +115,9 @@ def view_tissot(request):
         products = paginator.page(paginator.num_pages)
     return render(request, "products.html", {"products": products})
 
-def view_michaelkores(request):
-    """View to display only Michael Kores"""
-    products = Product.objects.all().filter(brand='Michael Kores')
+def view_michaelkors(request):
+    """View to display only Michael Kors"""
+    products = Product.objects.all().filter(brand='Michael Kors')
     paginator = Paginator(products, 8)  # Show 8 products per page
     
     page = request.GET.get('page')

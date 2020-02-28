@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from .views import view_index, all_products2, product_detail, view_menswatch, view_ladieswatch, view_kidswatch, view_rolex, view_timex, view_tedbaker, view_tissot, view_michaelkores,view_lacoste, view_lorus, view_citizen
+from .views import view_index, all_products2, product_detail, view_menswatch, view_ladieswatch, view_kidswatch, view_rolex, view_timex, view_tedbaker, view_tissot, view_michaelkors,view_lacoste, view_lorus, view_citizen
 
 
 
@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^view_timex/$', view_timex, name='timex'),
     url(r'^view_tedbaker/$', view_tedbaker, name='tedbaker'),
     url(r'^view_tissot/$', view_tissot, name='tissot'),
-    url(r'^view_michaelkores/$', view_michaelkores, name='michaelkores'),
+    url(r'^view_michaelkors/$', view_michaelkors, name='michaelkors'),
     url(r'^view_lacoste/$', view_lacoste, name='lacoste'),
     url(r'^view_lorus/$', view_lorus, name='lorus'),
     url(r'^view_citizen/$', view_citizen, name='citizen'),

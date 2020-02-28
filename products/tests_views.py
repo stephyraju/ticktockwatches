@@ -52,7 +52,7 @@ class TestProductViews(TestCase):
         self.assertTemplateUsed(page, "products.html")
 
     def test_michaelkores_watch_redirects_to_products_page(self):
-        page = c.get("/products/view_michaelkores/")
+        page = c.get("/products/view_michaelkors/")
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "products.html")
 
