@@ -129,6 +129,11 @@ footer ul {
 .highlight {
   color: blanchedalmond;
 }
+/* push footer down to bottom of the page. 
+452px = navbar height(56px) + Footer height(396px) */
+.footer-down {
+  min-height: calc(100vh - 452px);
+}
 @media screen and (max-width: 767px){
   .footer-img img{
       padding-bottom: 30px;
