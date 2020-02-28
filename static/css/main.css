@@ -144,7 +144,7 @@ footer ul {
     text-align: center;
   }
   }
-/*------------ Messages --------------*/
+/*------ Messages -------*/
 
 .messages {
   background-color: #e6e6e6;
@@ -387,8 +387,11 @@ footer ul {
   color:rgb(0, 128, 129);
   text-decoration: none;
 }
-/*------------ Cart page ---------------*/
-
+/*-------- Cart page --------*/
+.del-button:focus,
+.del-button:active{
+  outline: none;
+}
  @media (min-width: 1200px) { 
 .cart-container {
   margin-top: 1.5rem;
@@ -396,33 +399,12 @@ footer ul {
   background-color: #f8f9fa;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
 }
-
  }
  /*-- Favourite--*/
  .fav-form button:focus,
- fav-form button:active {
+ .fav-form button:active {
    outline: none;
  }
- 
- /* .favorite .fas, 
- .favourited.far {
-  font-size: 1.8em;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-} */
-/* .modal-container .shape {
-  max-width: 250px;
-  margin: 18px;
-  padding: 10px;
-  background-color: #262626;
-} */
-/* .fav {
-  display: inline;
-  padding-right: 5px;
-  padding-left: 5px;
-  color: #ddd;
-} */
 .fav-button {
   background-color: Transparent;
   background-repeat:no-repeat;
