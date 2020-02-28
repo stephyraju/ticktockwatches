@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from products.models import Product
+from django.contrib import messages
 
 # Create your views here.
 
@@ -16,6 +17,9 @@ def add_to_cart(request, id):
 
     cart = request.session.get('cart', {})
     cart[id] = cart.get(id, quantity)
+
+    if id in cart:
+        messages.success(request, 'Watch successfully added to cart')
 
     request.session['cart'] = cart
     return redirect(reverse('index'))
