@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+from django.core.mail import send_mail
 import os
 
 # if os.path.exists('env.py'):
@@ -40,10 +40,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = development
 
-ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), 'ticktockwatches.herokuapp.com',]
+ALLOWED_HOSTS = [os.environ.get('C2_HOSTNAME'), 'ticktockwatches.herokuapp.com',] 
+
+# # if development: 
 # ALLOWED_HOSTS = ['0.0.0.0']
+
 
 # Application definition
 
