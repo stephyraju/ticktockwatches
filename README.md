@@ -14,7 +14,7 @@ The deployed site can be found at [TickTock](https://ticktockwatches.herokuapp.c
 
 ## Table Of Contents
 
-**1.[UX](#ux)**
+**1. [UX](#ux)**
   * [User Stories](#user-stories)
   * [Design](#design)
     * [Framework](#framework)
@@ -23,28 +23,28 @@ The deployed site can be found at [TickTock](https://ticktockwatches.herokuapp.c
     * [Typography](#typography)
   * [Wireframes](#wireframes)
 
-**2.[Features](#features)**
+**2. [Features](#features)**
 
   * [Existing Features](#existing-features)
   * [Features Left to Implement](#features-left-to-implement)
 
-**3.[Technologies Used](#technologies-used)**
+**3. [Technologies Used](#technologies-used)**
 
   * [Front-End Technologies](#front-end-technologies)
   * [Back-End Technologies](#back-end-technologies)
 
-**4.[Testing](#testing)**
+**4. [Testing](#testing)**
 
 
 
-**5.[Github Repository](#github-repository)**
+**5. [Github Repository](#github-repository)**
 
-**6.[Deployment](#deployment)**
+**6. [Deployment](#deployment)**
 
   * [Local Deployment](#how-to-run-this-project-locally)
   * [Heroku Deployment](#heroku-deployment)
 
-**7.[Credits](#credits)**
+**7. [Credits](#credits)**
 
 -----------------------------
 
@@ -116,7 +116,7 @@ All of my wireframes for this project can be found [here](https://github.com/ste
 
 ### Accounts App
 
-The accounts app will allow users to register for free and create their own unique account. This is built using Django's authentication and authorization to validate profile data. Passwords are hashed for security purposes!
+The accounts app will allow users to register for free and create their own unique account. This is built using Django's authentication and authorization to validate profile data. Passwords are hashed for security purposes.
 
 The users will register using the registration form. Registered users will be able to login by using the login form with their username and password or with their email and password.
 
@@ -124,13 +124,13 @@ The users can also reset their password if they forgot the original password usi
 
 ### Products App
 
-**Index (Home Page)**
+**index (Home Page)**
 
 Displays the Featured Products, and the top brands available in the shop.
 
 In this page user can filter the products by gender.
 
-**Product.html**
+**product.html**
 
  Displays all the products available in the website.
  Pagination to display only 8 products per page.
@@ -140,39 +140,39 @@ In this page user can filter the products by gender.
  Users can go for more details if they click on the image.
 
 
-**Product detail.html**
+**product_detail.html**
 
 On this page the user can see all the details about the product. The product title, Price and the product features.
 If the user want to add the product to the cart they can do from here as well.
 
 ### Home app
 
- **About.html**
+ **about.html**
 
-  This page explains about the shop and  how it works 
+  This page explains about the shop and  how it works.
 
-**Contact.html**
+**contact.html**
 
  In the navbar and footer, there is a link for the customer to contact the shop. The user can fill out the form to send an email to reach the shop.
- When the user clicks "send" the email is processed and sent via emailjs to Owner’s email address and user has been notified via message.
+ When the user clicks "send" the email is processed and sent to Owner’s email address and user has been notified via message.
 
 **delivery.html**
 
 In the footer, there is a link for the customer to reach this page. In this page, all the delivery policies are explained including delivery charges for different countries.
 
-**Faqs.html**
+**faqs.html**
 
  The FAQs page has some common questions and answers, so the user can easily find the relevent one.
 
  The user can go to the contact page from the button at the end of the page if they have further questions.
  
-**Reurn.html**
+**return.html**
  
  The reurn page features the reurn policies of the shop.
 
 ### Cart App
 
-**Cart Page**
+**cart.html**
 
 The shopping cart page features the summary of all the items added to the cart.
 
@@ -184,7 +184,7 @@ The user can see the Total of the shopping cost and this will be updated when th
 
 ### Checkout App
 
-**Checkout.html**
+**checkout.html**
 
 Each checkout page features an order summary, which lists all the items in the users cart, title, price and quantity. 
 
@@ -200,13 +200,13 @@ This will allow the user to search for a product based on the title.
 
 The search icon is visible from all the pages. When the user click on the icon, the search bar will pop up.
 
-### Favourite app
+### Favourite App
 
 This will allow users to add or remove the products by clicking the heart icon on the product card.
 
 The user can see all their favourite products in the favourite page which can be accessed by clicking on the heart icon from the navbar.
 
-### Base template 
+### Base Template 
 
 Features available from all the pages
 
@@ -216,7 +216,7 @@ In order to create the navbar I have used Bootstrap 4 and the navbar is availabl
 
 The nabar features The shop logo on the left , which is linked to the homepage, home page, Products and a dropdown for brands.
 
-On the right side of the navbar, the user can reach to the accounts, shopping cart, search page and the contact page.
+On the right side of the navbar, the user can reach to the Accounts, Shopping cart, Search page and the Contact page.
 
 A user who is currently logged in will see options to see their profile page or log out.
 
@@ -226,7 +226,7 @@ The shopping cart icon can lead to cart page. Once the user has added at least o
 
 When the user click on the search icon, The search bar will appaer and the user can type in their relevent product search.
 
-The mail icon ath the right end is linked to contact page.
+The mail icon at the right end is linked to contact page.
 
 **Footer**
 
@@ -236,9 +236,9 @@ The footer background is dark to give a contrast and obvious separation betwwen 
 
 The headings are white and when the user hover over it gently turns to light yellow.
 
-The footer has link to Home, Products, about us, return policy, delivery policy, Faqs and contact us page.
+The footer has link to Home, Products, About Us, Return policy, Delivery policy, Faqs and Contact us page.
 
-There is a store locator link is available on the footer
+There is a store locator link is available on the footer which can lead to the google map location.
 
 The footer also linked to social media accounts.
 
@@ -246,7 +246,7 @@ At the bootom of the footer has copyright information for ticktock watch shop.
 
 ## Features Left to Implement
 
-1. Order confirmation report and emails to customer whey they place an order.
+1. Order confirmation report and emails to customer when they place an order.
 2. Checkout pages to include a field for customer to get delivery charges.
 3. Add sorting and filtering options to make it more easier to slelect the product.
 4. Review and rating section for users for each product they buy.
@@ -293,7 +293,7 @@ At the bootom of the footer has copyright information for ticktock watch shop.
   * **JavaScript**: I have used [https://jshint.com/](https://jshint.com/) in order to check the JavaScript code.
 
 ### Coverage
-Coverage.py was used to provide feedback during testing to check that enough of my code had been tested.
+coverage.py was used to provide feedback during testing to check that enough of my code had been tested.
 
  I built 52 different tests to encompass most of my python views, forms, and models. Using the coverage.py test package, those 52 tests have provided an overall result of 75% test coverage.
 
@@ -349,7 +349,7 @@ Desktop - Chrome v.74
 
 Desktop - Firefox v.67
 
-------------------------
+
 ### Known Bug
 
 I have added favourite functionality to facilitate user to add their favourite products and would be able to view favourites when click on the heart icon on the navbar. When user click on the heart icon on the product card it will turn to solid to indicate that product is added to favourite list, this part is working. But the user can't see their favourite product from the favourite page. I have decided to keep it as it is for now and will tackle this bug for the future release.
