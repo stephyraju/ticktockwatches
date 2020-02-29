@@ -145,7 +145,7 @@ def view_lacoste(request):
 
 def view_lorus(request):
     """View to display only Lotus"""
-    products = Product.objects.all().filter(brand='Lotus')
+    products = Product.objects.all().filter(brand='Lorus')
     paginator = Paginator(products, 8)  # Show 8 products per page
     
     page = request.GET.get('page')
