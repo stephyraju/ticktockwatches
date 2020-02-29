@@ -350,7 +350,12 @@ Desktop - Chrome v.74
 Desktop - Firefox v.67
 
 ------------------------
- ### GitHub Repository
+### Known Bug
+
+I have added favourite functionality to facilitate user to add their favourite products and would be able to view favourites when click on the heart icon on the navbar. When user click on the heart icon on the product card it will turn to solid to indicate that product is added to favourite list, this part is working. But the user can't see their favourite product from the favourite page. I have decided to keep it as it is for now and will tackle this bug for the future release.
+
+-------------------------
+### GitHub Repository
 
 1. Created a repository in GitHub called: “stephyraju/ticktockwatches” https://github.com/stephyraju/   ticktockwatches
 
