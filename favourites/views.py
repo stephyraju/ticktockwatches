@@ -39,42 +39,4 @@ def add_remove_favourites(request, id):
     product.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-    #working
-    # product = get_object_or_404(Product, pk=id)c
-    # user_profile = User.objects.get(email=request.user.email)
-    # favourites = Favourites.objects.filter(user=request.user)
-
-    # # import pdb
-    # # pdb.set_trace()
-
-    # if favourites.filter(user=user_profile).exists():
-    #     Favourites.objects.filter(user=user_profile).delete()
-       
-    # else:
-    #     Favourites.objects.create(user=user_profile, product=product)
-
-    # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
     
-
-    #  product = get_object_or_404(Product,pk=id)
-    # if request.method == 'POST':
-    #     user_profile = User.objects.get(email=request.user.email)
-    #     fav_product = Product.objects.get(pk=id)
-        
-    #     if fav_product in user_profile.favourites.all():
-    #         user_profile.favourites.remove(fav_product)
-    #     else:
-    #         user_profile.favourites.add(fav_product)
-
-    
-    # return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-# def favourite_list(request):  
-#     # import pdb;
-#     # pdb.set_trace()
-#     print("==============")
-#     favourite_products = Favourites.objects.filter(user=request.user)
-#     print(favourite_products)
-#     return render(request, 'favourite.html', {"favourite_products": favourite_products })
-     

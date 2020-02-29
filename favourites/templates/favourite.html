@@ -30,26 +30,15 @@
                     <div class="col-10">
                         <h4>{{ product.title }}</h4>
                     </div>
-                    <!-- <div class="col-10">
-                        <form class="form-inline" method="post" action="{% url 'add_remove_favourites' product.id %}">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <button type="submit" class="btn btn-dark btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><strong>Quantity</strong></button>
-                                    <input class="input-cart px-1" name="quantity" type="number" min="0" max="50" class="form-control" value="{{item.quantity}}">
-                                </div>
-                            </div>
-                        </form>
-                    </div> -->
                 </div>
             </div>
             {% endfor %}
         </div> 
         {% else %}
         <heading class="col-11 col-md-10 text-center mt-5">
-        <h1>You don't have any favourites!</h1>
+        <h4>You don't have any favourites.</h4>
         </heading>
-        <div class="col-10 text-center brand-card mt-5">    
+        <div class="col-10 text-center brand-card mt-5 pr-1">    
             <a href="{% url 'all_products2' %}"><strong>Continue Shopping</strong></a>
         </div>
         {% endif %}
