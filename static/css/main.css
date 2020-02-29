@@ -156,7 +156,7 @@ footer ul {
   color: rgb(0, 128, 129);
   position: relative;
 }
-.error-msg,.error{
+.error-msg, #credit-card-errors .error{
     color: #ff6600;
   }
 
