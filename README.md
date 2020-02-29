@@ -418,7 +418,7 @@ Again this command may differ depending on your operating system, please check t
 
         - SECRET_KEY
 
-        - ENVIRONMENT
+        - C2_HOSTNAME
 
         - EMAIL_ADDRESS
 
@@ -487,6 +487,7 @@ Set the following config vars:
   | DATABASE_URL	          | <your_postgres_database url> |
   | EMAIL_ADDRESS           | <your_email_address>         | 
   | EMAIL_PASSWORD          | <your_password>              |
+  | C2_HOSTNAME             | <your_heroku_app_hostname>   |
 
 8. In the Heroku dashboard, click "Deploy".
 
